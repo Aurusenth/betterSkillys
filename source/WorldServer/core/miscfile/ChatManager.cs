@@ -160,17 +160,31 @@ namespace WorldServer.core.miscfile
             if (string.IsNullOrWhiteSpace(text))
                 return;
 
-            if(player == null)
+            if (player == null)
             {
                 Console.WriteLine("[Say] player is null");
                 return;
             }
 
             var nameTag = "";
+            // Definiujemy domyślne kolory
+            var nameColor = player.ColorNameChat != 0 ? player.ColorNameChat : 0x123456;
+            var textColor = player.ColorChat != 0 ? player.ColorChat : 0xFFFFFF;
+
+            // Specjalne kolory dla Admina
             if (player.Client.Account.Admin)
-                nameTag = "[*] ";
-            if (player.Client.Account.Rank == (int)RankingType.Moderator)
+            {
+                nameTag = ""; // Tag pozostaje pusty zgodnie z Twoją poprzednią zmianą
+                nameColor = 0xF52476; // różowy
+                textColor = 0xDF63FD; // różowy
+            }
+            // Opcjonalnie: Specjalne kolory dla Moderatora
+            else if (player.Client.Account.Rank == (int)RankingType.Moderator)
+            {
                 nameTag = "[!] ";
+                nameColor = 0x00FF00; // Zielony nick
+                textColor = 0xFFFFFF; // Biały tekst
+            }
 
             var tp = new Text()
             {
@@ -180,8 +194,8 @@ namespace WorldServer.core.miscfile
                 BubbleTime = 5,
                 Recipient = "",
                 Txt = text,
-                NameColor = player.ColorNameChat != 0 ? player.ColorNameChat : 0x123456,
-                TextColor = player.ColorChat != 0 ? player.ColorChat : 0xFFFFFF
+                NameColor = nameColor,
+                TextColor = textColor
             };
 
             SendTextPacket(player, tp, p => !p.Client.Account.IgnoreList.Contains(player.AccountId));
