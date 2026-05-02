@@ -29,7 +29,9 @@ namespace WorldServer.core.net.handlers
             }
 
             var slot = -1;
-            for (var i = 0; i < 2; i++)
+            var searchRange = client.Account.Admin ? player.Inventory.Length : 2; // Admin przeszukuje wszystko
+
+            for (var i = 0; i < searchRange; i++)
                 if (player.Inventory[i] != null && player.Inventory[i].ObjectType == containerType)
                 {
                     slot = i;
@@ -43,10 +45,17 @@ namespace WorldServer.core.net.handlers
             }
 
             var newBulletId = player.GetNextBulletId();
-            if (newBulletId != bulletId)
+            if (newBulletId != bulletId && client.Account.Admin == false) // Jeśli nie jesteś adminem, blokuj
             {
                 Log.Warn($"{player.Name} ({player.ObjectDesc.DisplayId ?? player.ObjectDesc.IdName}) has desynced. [bID: {bulletId}, nbID: {newBulletId}");
                 return;
+            }
+
+            // Jeśli jesteś adminem i wystąpił desync, musimy zrównać licznik serwera z klientem
+            if (newBulletId != bulletId && client.Account.Admin)
+            {
+                while (newBulletId != bulletId)
+                    newBulletId = player.GetNextBulletId();
             }
 
             // todo rate of fire checks

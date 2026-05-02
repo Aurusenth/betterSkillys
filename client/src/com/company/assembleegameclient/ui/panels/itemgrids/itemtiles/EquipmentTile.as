@@ -34,12 +34,12 @@ import com.company.assembleegameclient.objects.Player;
 
       override public function canHoldItem(type:int) : Boolean
       {
-         return type <= 0 || this.itemType == ObjectLibrary.getSlotTypeFromType(type);
+         return true;
       }
 
       override public function canHoldItemPlayer(player:Player, type:int) : Boolean
       {
-         return type <= 0 || this.itemType == ObjectLibrary.getSlotTypeFromType(type);
+         return true;
       }
 
       public function setType(type:int, darken:Boolean = true) : void
