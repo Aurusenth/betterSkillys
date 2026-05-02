@@ -372,7 +372,16 @@ namespace WorldServer.core.objects
             FameCounter = new FameCounter(this);
             FameGoal = GetFameGoal(FameCounter.ClassStats[ObjectType].BestFame);
             ExperienceGoal = GetExpGoal(Client.Character.Level);
+
+            // Standardowe pobranie gwiazdek z postępów konta
             Stars = GetStars();
+
+            // Jeśli gracz jest adminem, nadpisujemy wartość na 100 dla fioletowej gwiazdki
+            if (Client.Account.Admin)
+            {
+                Stars = 100;
+            }
+
             TickCount = 0;
 
             if (owner.IdName.Equals("Ocean Trench"))
