@@ -72,7 +72,7 @@ namespace WorldServer.core.objects
             }
 
             if (World is DailyQuestWorld)
-            {   
+            {
                 entity.ForceUpdate(slot);
                 SendInfo("You cannot use items while in the Marketplace!");
                 Client.SendPacket(new InvResult() { Result = 1 });
@@ -187,14 +187,25 @@ namespace WorldServer.core.objects
             }
             else
                 FameCounter.DrinkPot();
-            if (item.InvUse || item.Consumable || item.SlotType == slotType)
+            // 1. Sprawdzenie uprawnień: albo typ slotu pasuje, albo to przedmiot zużywalny, albo jesteś Adminem
+            bool canUse = item.InvUse || item.Consumable || item.SlotType == slotType || Client.Account.Admin;
+
+            if (canUse)
             {
+                // Wykonaj główną logikę przedmiotu
                 Activate(clientTime, time, item, slot, pos, objId, useType);
-                if (item.SlotType == slotType)
+
+                // Efekty wizualne (spacja to zazwyczaj slot 1)
+                if (item.SlotType == slotType || (Client.Account.Admin && slot == 1))
+                {
                     AbilityUseEffects(pos);
+                }
             }
             else
+            {
+                // Jeśli nie jesteś adminem i slot się nie zgadza - zablokuj
                 Client.SendPacket(new InvResult() { Result = 1 });
+            }
         }
 
         public static void HealDiscrete(Player player, int amount, bool magic)
