@@ -3,6 +3,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
    import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.assembleegameclient.util.TierUtil;
 import com.company.ui.SimpleText;
 import com.company.util.AssetLibrary;
 
@@ -11,6 +12,7 @@ import flash.display.Bitmap;
    import flash.display.Sprite;
 import flash.events.TimerEvent;
 import flash.filters.ColorMatrixFilter;
+import flash.filters.GlowFilter;
    import flash.geom.Matrix;
 import flash.utils.Timer;
 
@@ -34,6 +36,11 @@ import kabam.rotmg.constants.ItemConstants;
       public var itemData:Object;
       
       public var itemBitmap:Bitmap;
+      
+       private static const ITEM_GLOW_ALPHA:Number = 0.9;
+       private static const ITEM_GLOW_BLUR:Number = 16;
+       private static const ITEM_GLOW_STRENGTH:Number = 2;
+
       
       public function ItemTileSprite()
       {
@@ -129,7 +136,7 @@ import kabam.rotmg.constants.ItemConstants;
                  this.spriteFile = null;
                  this.first = this.last = this.next = -1;
              }
-
+             this.applySpecialTierGlow(eqXML);
              visible = true;
          }
          else
@@ -164,5 +171,28 @@ import kabam.rotmg.constants.ItemConstants;
            if (this.next > this.last)
                this.next = this.first;
        }
+
+private function applySpecialTierGlow(eqXML:XML) : void
+{
+   var color:Number = TierUtil.getSpecialTierColor(eqXML);
+
+   if(!isNaN(color))
+   {
+      this.itemBitmap.filters = [
+         new GlowFilter(
+            uint(color),
+            ITEM_GLOW_ALPHA,
+            ITEM_GLOW_BLUR,
+            ITEM_GLOW_BLUR,
+            ITEM_GLOW_STRENGTH,
+            1
+         )
+      ];
+   }
+   else
+   {
+      this.itemBitmap.filters = null;
+   }
+}
    }
 }

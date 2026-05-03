@@ -87,5 +87,35 @@ public class TierUtil
         activateTags = itemDataXML.Activate.(text() == "PermaPet");
         return activateTags.length() >= 1;
     }
+
+    public static function getSpecialTierColor(xml:XML) : Number
+    {
+        if(xml == null)
+        {
+            return NaN;
+        }
+
+        if(xml.hasOwnProperty("Admin"))
+        {
+            return ADMIN_COLOR;
+        }
+
+        if(xml.hasOwnProperty("Ethereal"))
+        {
+            return ETHEREAL_COLOR;
+        }
+
+        if(xml.hasOwnProperty("Ascended"))
+        {
+            return ASCENDED_COLOR;
+        }
+
+        if(xml.hasOwnProperty("Legendary"))
+        {
+            return LEGENDARY_COLOR;
+        }
+
+        return NaN;
+    }
 }
 }
