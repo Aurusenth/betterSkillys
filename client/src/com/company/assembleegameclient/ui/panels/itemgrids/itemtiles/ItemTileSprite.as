@@ -38,8 +38,8 @@ import kabam.rotmg.constants.ItemConstants;
       public var itemBitmap:Bitmap;
       
        private static const ITEM_GLOW_ALPHA:Number = 0.9;
-       private static const ITEM_GLOW_BLUR:Number = 16;
-       private static const ITEM_GLOW_STRENGTH:Number = 2;
+       private static const ITEM_GLOW_BLUR:Number = 6;
+       private static const ITEM_GLOW_STRENGTH:Number = 3.5;
 
       
       public function ItemTileSprite()
