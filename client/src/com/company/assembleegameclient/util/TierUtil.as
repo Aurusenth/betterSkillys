@@ -29,13 +29,20 @@ public class TierUtil
         var treasure:* = !xml.hasOwnProperty("Treasure");
         var petFood:* = !xml.hasOwnProperty("PetFood");
         var tier:Boolean = xml.hasOwnProperty("Tier");
+
         if(isnotpet && consumable && treasure && petFood && noTierTag)
         {
             label = new UILabel();
+
             if(tier)
             {
                 color = 16777215;
                 tierTag = "T" + xml.Tier;
+            }
+            else if(xml.hasOwnProperty("Legendary"))
+            {
+                color = 0xE6C84F;
+                tierTag = "LG";
             }
             else if(xml.hasOwnProperty("@setType"))
             {
@@ -47,10 +54,12 @@ public class TierUtil
                 color = TooltipHelper.UNTIERED_COLOR;
                 tierTag = "UT";
             }
+
             label.text = tierTag;
             DefaultLabelFormat.tierLevelLabel(label,size,color);
             return label;
         }
+
         return null;
     }
 

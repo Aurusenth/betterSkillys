@@ -1213,6 +1213,7 @@
 		<Activate>Shoot</Activate>
 		<NumProjectiles>5</NumProjectiles>
 		<feedPower>1200</feedPower>
+		<Legendary/>
 		<Soulbound/>
 	</Object>
 	<Object type="0xa78" id="Wolfskin Armor">
