@@ -1,8 +1,8 @@
-﻿using Shared;
+﻿using System;
+using System.Linq;
+using Shared;
 using Shared.database.character.inventory;
 using Shared.resources;
-using System;
-using System.Linq;
 using WorldServer.core.objects;
 using WorldServer.core.objects.containers;
 using WorldServer.core.worlds;
@@ -20,17 +20,15 @@ namespace WorldServer.core.commands
             {
                 var gameData = player.GameServer.Resources.GameData;
                 var splitArgs = args.Split(' ');
-                int amount = 1;
+                int totalAmount = 1;
                 string itemName = args;
 
-                // Parsowanie argumentów: ilość i nazwa przedmiotu
                 if (splitArgs.Length > 1 && int.TryParse(splitArgs[0], out int requestedAmount))
                 {
-                    amount = requestedAmount;
+                    totalAmount = requestedAmount;
                     itemName = string.Join(" ", splitArgs.Skip(1));
                 }
 
-                // Szukanie przedmiotu w bazie danych
                 if (!gameData.DisplayIdToObjectType.TryGetValue(itemName, out ushort objType))
                 {
                     if (!gameData.IdToObjectType.TryGetValue(itemName, out objType))
@@ -48,40 +46,47 @@ namespace WorldServer.core.commands
 
                 var item = gameData.Items[objType];
 
-                // 1. Pobranie typu woreczka z Twojego XML
                 if (!gameData.IdToObjectType.TryGetValue("Soulbound Loot Bag", out var bagType))
                 {
-                    bagType = 0x0503; // Fallback do standardowego ID fioletowego woreczka
+                    bagType = 0x0503;
                 }
 
-                // 2. Inicjalizacja kontenera (czas zniknięcia: 120000ms = 2 minuty)
-                var container = new Container(player.GameServer, bagType, 120000, true);
+                int remaining = totalAmount;
+                Random rand = new Random();
 
-                // 3. Wypełnienie ekwipunku woreczka wygenerowanym przedmiotem
-                // Uwzględniamy logikę stackowania (ItemData), którą masz w systemie lootu
-                for (int j = 0; j < amount && j < 8; j++)
+                while (remaining > 0)
                 {
-                    if (item.Quantity > 0 && item.QuantityLimit > 0)
+                    int amountInThisBag = Math.Min(remaining, 8);
+
+                    // Ustawiono czas życia na 30000 ms (30 sekund)
+                    var container = new Container(player.GameServer, bagType, 30000, true);
+
+                    for (int j = 0; j < amountInThisBag; j++)
                     {
-                        container.Inventory.Data[j] = new ItemData()
+                        if (item.Quantity > 0 && item.QuantityLimit > 0)
                         {
-                            Stack = item.Quantity,
-                            MaxStack = item.QuantityLimit
-                        };
+                            container.Inventory.Data[j] = new ItemData()
+                            {
+                                Stack = item.Quantity,
+                                MaxStack = item.QuantityLimit
+                            };
+                        }
+                        container.Inventory[j] = item;
                     }
-                    container.Inventory[j] = item;
+
+                    container.BagOwners = new int[] { player.AccountId };
+
+                    // Rozrzut 0.8 dla lepszej widoczności oddzielnych worków
+                    float offsetX = (float)((rand.NextDouble() * 2 - 1) * 0.8);
+                    float offsetY = (float)((rand.NextDouble() * 2 - 1) * 0.8);
+
+                    container.Move(player.X + offsetX, player.Y + offsetY);
+                    player.World.EnterWorld(container);
+
+                    remaining -= amountInThisBag;
                 }
 
-                // 4. Przypisanie właściciela (tylko Ty go zobaczysz)
-                container.BagOwners = new int[] { player.AccountId };
-
-                // 5. Przesunięcie woreczka na pozycję gracza
-                container.Move(player.X, player.Y);
-
-                // 6. Spawn woreczka w świecie przy użyciu metody potwierdzonej w Loots.cs
-                player.World.EnterWorld(container);
-
-                player.SendInfo($"Gave {amount}x {itemName} in a Soulbound Loot Bag!");
+                player.SendInfo($"Gave {totalAmount}x {itemName} in Soulbound Loot Bag(s) (30s lifetime)!");
                 return true;
             }
         }
