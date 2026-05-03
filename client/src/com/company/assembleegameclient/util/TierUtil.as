@@ -10,7 +10,10 @@ import com.company.assembleegameclient.util.FilterUtil;
 
 public class TierUtil
 {
-
+    private static const ADMIN_COLOR:Number = 0x8F58A9;
+    private static const ETHEREAL_COLOR:Number = 0xBA1443;
+    private static const ASCENDED_COLOR:Number = 0xA35282;
+    private static const LEGENDARY_COLOR:Number = 0xD69A21;
 
     public function TierUtil()
     {
@@ -34,15 +37,30 @@ public class TierUtil
         {
             label = new UILabel();
 
-            if(tier)
+            if(xml.hasOwnProperty("Admin"))
             {
-                color = 16777215;
-                tierTag = "T" + xml.Tier;
+                color = ADMIN_COLOR;
+                tierTag = "A";
+            }
+            else if(xml.hasOwnProperty("Ethereal"))
+            {
+                color = ETHEREAL_COLOR;
+                tierTag = "ET";
+            }
+            else if(xml.hasOwnProperty("Ascended"))
+            {
+                color = ASCENDED_COLOR;
+                tierTag = "AS";
             }
             else if(xml.hasOwnProperty("Legendary"))
             {
-                color = 0xE6C84F;
+                color = LEGENDARY_COLOR;
                 tierTag = "LG";
+            }
+            else if(tier)
+            {
+                color = 16777215;
+                tierTag = "T" + xml.Tier;
             }
             else if(xml.hasOwnProperty("@setType"))
             {

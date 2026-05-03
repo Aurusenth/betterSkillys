@@ -8027,6 +8027,7 @@
 			<Index>0xc6</Index>
 		</Texture>
 		<SlotType>9</SlotType>
+		<Admin/>
 		<Description>Super regal!</Description>
 		<ActivateOnEquip stat="26" amount="60">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="27" amount="700">IncrementStat</ActivateOnEquip>
@@ -8443,6 +8444,7 @@
 			<Index>0x178</Index>
 		</Texture>
 		<SlotType>9</SlotType>
+		<Ethereal/>
 		<Description>An Olympic gold medal in synchronised swimming.</Description>
 		<ActivateOnEquip stat="28" amount="3">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="26" amount="3">IncrementStat</ActivateOnEquip>
@@ -8460,6 +8462,7 @@
 			<Index>0x179</Index>
 		</Texture>
 		<SlotType>9</SlotType>
+		<Ascended/>
 		<Description>An Olympic silver medal in synchronised swimming.</Description>
 		<ActivateOnEquip stat="28" amount="2">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="26" amount="2">IncrementStat</ActivateOnEquip>
@@ -8477,6 +8480,7 @@
 			<Index>0x17a</Index>
 		</Texture>
 		<SlotType>9</SlotType>
+		<Legendary/>
 		<Description>An Olympic bronze medal in synchronised swimming.</Description>
 		<ActivateOnEquip stat="28" amount="1">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="26" amount="1">IncrementStat</ActivateOnEquip>
