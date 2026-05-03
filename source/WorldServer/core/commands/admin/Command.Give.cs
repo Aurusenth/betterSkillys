@@ -1,7 +1,7 @@
 ﻿using Shared;
 using Shared.database.character.inventory;
 using Shared.resources;
-using System.Collections.Generic;
+using System;
 using System.Linq;
 using WorldServer.core.objects;
 using WorldServer.core.objects.containers;
@@ -23,43 +23,44 @@ namespace WorldServer.core.commands
                 int amount = 1;
                 string itemName = args;
 
+                // Parsowanie argumentów: ilość i nazwa przedmiotu
                 if (splitArgs.Length > 1 && int.TryParse(splitArgs[0], out int requestedAmount))
                 {
                     amount = requestedAmount;
                     itemName = string.Join(" ", splitArgs.Skip(1));
                 }
 
+                // Szukanie przedmiotu w bazie danych
                 if (!gameData.DisplayIdToObjectType.TryGetValue(itemName, out ushort objType))
                 {
                     if (!gameData.IdToObjectType.TryGetValue(itemName, out objType))
                     {
-                        player.SendError($"unable to find item: {itemName}!");
+                        player.SendError($"Unable to find item: {itemName}!");
                         return false;
                     }
                 }
 
                 if (!gameData.Items.ContainsKey(objType))
                 {
-                    player.SendError($"unable to find item: {itemName}!");
+                    player.SendError($"Unable to find item: {itemName}!");
                     return false;
                 }
 
                 var item = gameData.Items[objType];
 
-                // 1. Pobieramy ID dla Soulbound Bag (zazwyczaj 0x0503)
-                // W Twoim systemie "Loot Bag 6" to White Bag, "Loot Bag 5" to fioletowy (SB).
-                if (!gameData.IdToObjectType.TryGetValue("Loot Bag 5", out var bagType))
+                // 1. Pobranie typu woreczka z Twojego XML
+                if (!gameData.IdToObjectType.TryGetValue("Soulbound Loot Bag", out var bagType))
                 {
-                    bagType = 0x0503; // Fallback
+                    bagType = 0x0503; // Fallback do standardowego ID fioletowego woreczka
                 }
 
-                // 2. Tworzymy kontener dokładnie tak, jak robi to Twoja metoda DropBag
+                // 2. Inicjalizacja kontenera (czas zniknięcia: 120000ms = 2 minuty)
                 var container = new Container(player.GameServer, bagType, 120000, true);
 
-                // 3. Wypełniamy ekwipunek kontenera
+                // 3. Wypełnienie ekwipunku woreczka wygenerowanym przedmiotem
+                // Uwzględniamy logikę stackowania (ItemData), którą masz w systemie lootu
                 for (int j = 0; j < amount && j < 8; j++)
                 {
-                    // Obsługa stackowalnych przedmiotów (zgodnie z Twoim kodem Loot.cs)
                     if (item.Quantity > 0 && item.QuantityLimit > 0)
                     {
                         container.Inventory.Data[j] = new ItemData()
@@ -71,16 +72,16 @@ namespace WorldServer.core.commands
                     container.Inventory[j] = item;
                 }
 
-                // 4. Przypisujemy właściciela (Twoje AccountId w tablicy)
+                // 4. Przypisanie właściciela (tylko Ty go zobaczysz)
                 container.BagOwners = new int[] { player.AccountId };
 
-                // 5. Ustawiamy pozycję na graczu
+                // 5. Przesunięcie woreczka na pozycję gracza
                 container.Move(player.X, player.Y);
 
-                // 6. Spawnujemy w świecie (używając metody, którą Twój Loot.cs potwierdził: World.EnterWorld)
+                // 6. Spawn woreczka w świecie przy użyciu metody potwierdzonej w Loots.cs
                 player.World.EnterWorld(container);
 
-                player.SendInfo($"Gave {amount}x {itemName} in a Soulbound Bag.");
+                player.SendInfo($"Gave {amount}x {itemName} in a Soulbound Loot Bag!");
                 return true;
             }
         }
