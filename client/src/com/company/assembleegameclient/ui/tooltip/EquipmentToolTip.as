@@ -42,6 +42,7 @@ public class EquipmentToolTip extends ToolTip
 
 
    private static const MAX_WIDTH:int = 230;
+   private static const TOOLTIP_BACKGROUND_ALPHA:Number = 0.88;
    private static const CSS_TEXT:String = ".in { margin-left:10px; text-indent: -10px; }";
    private var iconSize:Number = 60;
    private var icon_:Bitmap;
@@ -113,10 +114,17 @@ public class EquipmentToolTip extends ToolTip
 
       this.props_ = ObjectLibrary.propsLibrary_[objectType];
 
+      var specialTierOutlineColor:Number = TierUtil.getSpecialTierColor(this.objectXML_);
+
       this.backgroundColor = this.playerCanUse || this.player_ == null ? 0x363636 : 6036765;
       this.outlineColor = this.playerCanUse || player == null ? 0x9B9B9B : 10965039;
-      super(backgroundColor, 1, outlineColor, 1, true);
 
+      if(!isNaN(specialTierOutlineColor))
+      {
+         this.outlineColor = uint(specialTierOutlineColor);
+      }
+
+      super(this.backgroundColor, TOOLTIP_BACKGROUND_ALPHA, this.outlineColor, 1, true);
       if(this.player_ == null)
       {
          this.curItemXML_ = this.objectXML_;
