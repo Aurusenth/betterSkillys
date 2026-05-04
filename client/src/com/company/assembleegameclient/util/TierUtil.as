@@ -5,8 +5,6 @@ import com.company.assembleegameclient.misc.UILabel;
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.ObjectProperties;
 import com.company.assembleegameclient.ui.tooltip.TooltipHelper;
-import flash.filters.DropShadowFilter;
-import com.company.assembleegameclient.util.FilterUtil;
 
 public class TierUtil
 {
@@ -22,69 +20,156 @@ public class TierUtil
 
     public static function getTierTag(props:ObjectProperties, size:int = 16) : UILabel
     {
-        var xml:XML = ObjectLibrary.xmlLibrary_[props.type_];
+        var xml:XML = props ? ObjectLibrary.xmlLibrary_[props.type_] : null;
         var label:UILabel = null;
-        var color:Number = NaN;
-        var tierTag:String = null;
-        var isnotpet:* = !isPet(xml);
-        var consumable:* = !xml.hasOwnProperty("Consumable");
-        var noTierTag:* = !xml.hasOwnProperty("NoTierTag");
-        var treasure:* = !xml.hasOwnProperty("Treasure");
-        var petFood:* = !xml.hasOwnProperty("PetFood");
-        var tier:Boolean = xml.hasOwnProperty("Tier");
 
-        if(isnotpet && consumable && treasure && petFood && noTierTag)
+        if(!canShowTierTag(xml))
         {
-            label = new UILabel();
-
-            if(xml.hasOwnProperty("Admin"))
-            {
-                color = ADMIN_COLOR;
-                tierTag = "A";
-            }
-            else if(xml.hasOwnProperty("Ethereal"))
-            {
-                color = ETHEREAL_COLOR;
-                tierTag = "ET";
-            }
-            else if(xml.hasOwnProperty("Ascended"))
-            {
-                color = ASCENDED_COLOR;
-                tierTag = "AS";
-            }
-            else if(xml.hasOwnProperty("Legendary"))
-            {
-                color = LEGENDARY_COLOR;
-                tierTag = "LG";
-            }
-            else if(tier)
-            {
-                color = 16777215;
-                tierTag = "T" + xml.Tier;
-            }
-            else if(xml.hasOwnProperty("@setType"))
-            {
-                color = TooltipHelper.SET_COLOR;
-                tierTag = "ST";
-            }
-            else
-            {
-                color = TooltipHelper.UNTIERED_COLOR;
-                tierTag = "UT";
-            }
-
-            label.text = tierTag;
-            DefaultLabelFormat.tierLevelLabel(label,size,color);
-            return label;
+            return null;
         }
 
-        return null;
+        label = new UILabel();
+
+        /*
+            Tag widoczny na item tile / inventory.
+            Każdy item, który ma mieć tag, pokazuje teraz zawsze UT.
+            Kolor zależy od prawdziwego tieru.
+        */
+        label.text = "UT";
+
+        DefaultLabelFormat.tierLevelLabel(label, size, getTierColor(xml));
+
+        return label;
+    }
+
+    public static function getTooltipTierTag(props:ObjectProperties, size:int = 16) : UILabel
+    {
+        var xml:XML = props ? ObjectLibrary.xmlLibrary_[props.type_] : null;
+        var label:UILabel = null;
+
+        if(!canShowTierTag(xml))
+        {
+            return null;
+        }
+
+        label = new UILabel();
+
+        /*
+            Tekst widoczny w tooltipie.
+            Tutaj pokazujemy pełną nazwę tieru.
+        */
+        label.text = getTierName(xml);
+
+        DefaultLabelFormat.tierLevelLabel(label, size, getTierColor(xml));
+
+        return label;
+    }
+
+    private static function canShowTierTag(xml:XML) : Boolean
+    {
+        if(xml == null)
+        {
+            return false;
+        }
+
+        return !isPet(xml)
+                && !xml.hasOwnProperty("Consumable")
+                && !xml.hasOwnProperty("NoTierTag")
+                && !xml.hasOwnProperty("Treasure")
+                && !xml.hasOwnProperty("PetFood");
+    }
+
+    public static function getTierName(xml:XML) : String
+    {
+        if(xml == null)
+        {
+            return "";
+        }
+
+        if(xml.hasOwnProperty("Admin"))
+        {
+            return "Admin";
+        }
+
+        if(xml.hasOwnProperty("Ethereal"))
+        {
+            return "Ethereal";
+        }
+
+        if(xml.hasOwnProperty("Ascended"))
+        {
+            return "Ascended";
+        }
+
+        if(xml.hasOwnProperty("Legendary"))
+        {
+            return "Legendary";
+        }
+
+        if(xml.hasOwnProperty("Tier"))
+        {
+            return "Tier " + xml.Tier;
+        }
+
+        if(xml.hasOwnProperty("@setType"))
+        {
+            return "Set";
+        }
+
+        return "untiered";
+    }
+
+    public static function getTierColor(xml:XML) : Number
+    {
+        if(xml == null)
+        {
+            return TooltipHelper.UNTIERED_COLOR;
+        }
+
+        if(xml.hasOwnProperty("Admin"))
+        {
+            return ADMIN_COLOR;
+        }
+
+        if(xml.hasOwnProperty("Ethereal"))
+        {
+            return ETHEREAL_COLOR;
+        }
+
+        if(xml.hasOwnProperty("Ascended"))
+        {
+            return ASCENDED_COLOR;
+        }
+
+        if(xml.hasOwnProperty("Legendary"))
+        {
+            return LEGENDARY_COLOR;
+        }
+
+        if(xml.hasOwnProperty("Tier"))
+        {
+            return 0xFFFFFF;
+        }
+
+        if(xml.hasOwnProperty("@setType"))
+        {
+            return TooltipHelper.SET_COLOR;
+        }
+
+        return TooltipHelper.UNTIERED_COLOR;
     }
 
     public static function isPet(itemDataXML:XML) : Boolean
     {
         var activateTags:XMLList = null;
+
+        if(itemDataXML == null)
+        {
+            return false;
+        }
+
         activateTags = itemDataXML.Activate.(text() == "PermaPet");
+
         return activateTags.length() >= 1;
     }
 

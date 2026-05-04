@@ -47,6 +47,7 @@ public class EquipmentToolTip extends ToolTip
    private var icon_:Bitmap;
    private var titleText_:SimpleText;
    private var tierText_:UILabel;
+   private var tierNameText_:UILabel;
    private var descText_:SimpleText;
    private var line1_:LineBreakDesign;
    private var line2_:LineBreakDesign;
@@ -138,6 +139,7 @@ public class EquipmentToolTip extends ToolTip
       this.makeLineTwo();
       this.makeRestrictionList();
       this.makeRestrictionText();
+      this.addTierNameText();
    }
 
    private static function GetEquipIndex(slotType:int, items:Vector.<ItemAttributes>):int {
@@ -215,7 +217,8 @@ public class EquipmentToolTip extends ToolTip
 
    private function addTierText() : void
    {
-      this.tierText_ = TierUtil.getTierTag(props_,16);
+      this.tierText_ = TierUtil.getTierTag(this.props_, 16);
+
       if(this.tierText_)
       {
          switch(Parameters.data_.itemDataOutlines)
@@ -224,11 +227,38 @@ public class EquipmentToolTip extends ToolTip
                this.tierText_.filters = FilterUtil.getTextOutlineFilter();
                break;
             case 1:
-               this.tierText_.filters = [new DropShadowFilter(0,0,0,0.5,12,12)];
+               this.tierText_.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
          }
+
+         this.tierText_.x = MAX_WIDTH - this.tierText_.width - 8;
+         this.tierText_.y = 6;
+
          addChild(this.tierText_);
       }
    }
+
+   private function addTierNameText() : void
+   {
+      this.tierNameText_ = TierUtil.getTooltipTierTag(this.props_, 14);
+
+      if(this.tierNameText_)
+      {
+         switch(Parameters.data_.itemDataOutlines)
+         {
+            case 0:
+               this.tierNameText_.filters = FilterUtil.getTextOutlineFilter();
+               break;
+            case 1:
+               this.tierNameText_.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
+         }
+
+         this.tierNameText_.x = MAX_WIDTH - this.tierNameText_.width - 8;
+         this.tierNameText_.y = this.height + 2;
+
+         addChild(this.tierNameText_);
+      }
+   }
+
 
    private function addTitle() : void {
       var color:int = this.playerCanUse ? 0xffffff : 10965039;
