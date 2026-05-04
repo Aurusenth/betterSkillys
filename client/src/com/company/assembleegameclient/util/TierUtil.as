@@ -15,6 +15,11 @@ public class TierUtil
     private static const UNTIERED_COLOR:Number = 0xE22BC9;
     private static const SET_COLOR:Number = 0xF2FF00;
 
+    private static const ADMIN_TITLE_COLOR:Number = 0xFF8BDE;
+    private static const ETHEREAL_TITLE_COLOR:Number = 0xFF5A5A;
+    private static const ASCENDED_TITLE_COLOR:Number = 0x66FFF0;
+    private static const LEGENDARY_TITLE_COLOR:Number = 0xFFE066;
+
     public function TierUtil()
     {
         super();
@@ -214,6 +219,35 @@ public class TierUtil
         if(xml.hasOwnProperty("Legendary"))
         {
             return LEGENDARY_COLOR;
+        }
+
+        return NaN;
+    }
+    public static function getSpecialTierTitleColor(xml:XML) : Number
+    {
+        if(xml == null)
+        {
+            return NaN;
+        }
+
+        if(xml.hasOwnProperty("Admin"))
+        {
+            return ADMIN_TITLE_COLOR;
+        }
+
+        if(xml.hasOwnProperty("Ethereal"))
+        {
+            return ETHEREAL_TITLE_COLOR;
+        }
+
+        if(xml.hasOwnProperty("Ascended"))
+        {
+            return ASCENDED_TITLE_COLOR;
+        }
+
+        if(xml.hasOwnProperty("Legendary"))
+        {
+            return LEGENDARY_TITLE_COLOR;
         }
 
         return NaN;

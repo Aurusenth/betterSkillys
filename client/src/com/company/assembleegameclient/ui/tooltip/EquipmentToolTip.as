@@ -271,30 +271,49 @@ public class EquipmentToolTip extends ToolTip
       }
    }
 
-   private function addTitle() : void {
+   private function addTitle() : void
+   {
+      var specialTitleColor:Number = TierUtil.getSpecialTierTitleColor(this.objectXML_);
       var color:int = this.playerCanUse ? 0xffffff : 10965039;
+
+      if(!isNaN(specialTitleColor))
+      {
+         color = uint(specialTitleColor);
+      }
+
       this.titleText_ = new SimpleText(16, color, false, MAX_WIDTH - this.icon_.width - 4 - 30, 0);
       this.titleText_.setBold(true);
       this.titleText_.wordWrap = true;
       this.titleText_.text = this.itemAtr.DisplayName;
+
       if(this.itemData_ != null)
       {
          if(this.itemData_.ObjectId != null)
+         {
             this.titleText_.text = this.itemData_.ObjectId;
+         }
+
          if(this.itemData_.Stack > 0)
+         {
             this.titleText_.text += " x" + this.itemData_.Stack;
+         }
       }
+
       this.titleText_.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
       this.titleText_.x = this.icon_.width + 4;
       this.titleText_.y = this.icon_.height / 2 - this.titleText_.actualHeight_ / 2;
       this.titleText_.updateMetrics();
-      switch (Parameters.data_.itemDataOutlines) {
+
+      switch(Parameters.data_.itemDataOutlines)
+      {
          case 0:
             this.titleText_.filters = FilterUtil.getTextOutlineFilter();
             break;
          case 1:
             this.titleText_.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
+            break;
       }
+
       addChild(this.titleText_);
    }
 
