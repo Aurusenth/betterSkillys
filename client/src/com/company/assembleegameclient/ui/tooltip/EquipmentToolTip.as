@@ -44,6 +44,8 @@ public class EquipmentToolTip extends ToolTip
    private static const MAX_WIDTH:int = 230;
    private static const TOOLTIP_BACKGROUND_ALPHA:Number = 0.88;
    private static const CSS_TEXT:String = ".in { margin-left:10px; text-indent: -10px; }";
+   private static const UNUSABLE_UT_OUTLINE_COLOR:uint = 0xB30000;
+   private static const UNUSABLE_TITLE_COLOR:uint = 0xFFA3E4;
    private var iconSize:Number = 60;
    private var icon_:Bitmap;
    private var titleText_:SimpleText;
@@ -119,7 +121,11 @@ public class EquipmentToolTip extends ToolTip
       this.backgroundColor = this.playerCanUse || this.player_ == null ? 0x363636 : 6036765;
       this.outlineColor = this.playerCanUse || player == null ? 0x9B9B9B : 10965039;
 
-      if(!isNaN(specialTierOutlineColor))
+      if(!this.playerCanUse && this.player_ != null && TierUtil.isUntiered(this.objectXML_))
+      {
+         this.outlineColor = UNUSABLE_UT_OUTLINE_COLOR;
+      }
+      else if(!isNaN(specialTierOutlineColor))
       {
          this.outlineColor = uint(specialTierOutlineColor);
       }
@@ -274,9 +280,10 @@ public class EquipmentToolTip extends ToolTip
    private function addTitle() : void
    {
       var specialTitleColor:Number = TierUtil.getSpecialTierTitleColor(this.objectXML_);
-      var color:int = this.playerCanUse ? 0xffffff : 10965039;
+      var isUnusable:Boolean = !this.playerCanUse && this.player_ != null;
+      var color:int = isUnusable ? UNUSABLE_TITLE_COLOR : 0xffffff;
 
-      if(!isNaN(specialTitleColor))
+      if(!isUnusable && !isNaN(specialTitleColor))
       {
          color = uint(specialTitleColor);
       }

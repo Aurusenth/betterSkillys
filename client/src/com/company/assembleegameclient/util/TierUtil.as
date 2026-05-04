@@ -140,6 +140,19 @@ public class TierUtil
                 || xml.hasOwnProperty("Legendary");
     }
 
+    public static function isUntiered(xml:XML) : Boolean
+    {
+        if(xml == null)
+        {
+            return false;
+        }
+
+        return canShowTierTag(xml)
+                && !isSpecialTier(xml)
+                && !xml.hasOwnProperty("Tier")
+                && !xml.hasOwnProperty("@setType");
+    }
+
     public static function getTierColor(xml:XML) : Number
     {
         if(xml == null)
