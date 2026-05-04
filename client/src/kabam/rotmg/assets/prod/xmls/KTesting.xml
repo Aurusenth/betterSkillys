@@ -296,6 +296,7 @@
          <Index>0xb0</Index>
       </Texture>
       <SlotType>22</SlotType>
+      <Admin/>
       <Description>A prism used for unprecedented velocity by the Cult of Admin.</Description>
       <Usable/>
       <MpCost>0</MpCost>
@@ -304,7 +305,7 @@
       <Activate maxDistance="20">Teleport</Activate>
       <BagType>6</BagType>
       <feedPower>100000</feedPower>
-       
+
    </Object>
    <Object type="0x5e22" id="TileSwap">
       <Class>GameObject</Class>
@@ -563,6 +564,7 @@
          <Index>0xe0</Index>
       </Texture>
       <SlotType>1</SlotType>
+      <Admin/>
       <Description>The sacred blade of the Cult of Admin. Not to be trifled with.</Description>
       <RateOfFire>1.5</RateOfFire>
       <OldSound>bladeSwing</OldSound>
@@ -575,7 +577,7 @@
       </Projectile>
       <BagType>6</BagType>
       <feedPower>100000</feedPower>
-       
+
    </Object>
    <Object type="0x9d6" id="Admin Wand">
       <Class>Equipment</Class>
@@ -585,6 +587,7 @@
          <Index>0xe1</Index>
       </Texture>
       <SlotType>8</SlotType>
+      <Admin/>
       <Description>Only advanced acolytes of the Cult of Admin may wield this weapon.</Description>
       <RateOfFire>1.5</RateOfFire>
       <OldSound>magicShoot</OldSound>
@@ -598,7 +601,7 @@
       </Projectile>
       <BagType>6</BagType>
       <feedPower>100000</feedPower>
-       
+
    </Object>
    <Object type="0x9d7" id="Admin Bow">
       <Class>Equipment</Class>
@@ -608,6 +611,7 @@
          <Index>0xe2</Index>
       </Texture>
       <SlotType>3</SlotType>
+      <Admin/>
       <Description>The Cult of Admin is always on the hunt for the unworthy.</Description>
       <RateOfFire>1.2</RateOfFire>
       <OldSound>arrowShoot</OldSound>
@@ -623,7 +627,7 @@
       <ArcGap>8</ArcGap>
       <BagType>6</BagType>
       <feedPower>100000</feedPower>
-       
+
    </Object>
    <Object type="0x9d8" id="Admin Dagger">
       <Class>Equipment</Class>
@@ -633,6 +637,7 @@
          <Index>0xe3</Index>
       </Texture>
       <SlotType>2</SlotType>
+      <Admin/>
       <Description>A cursed dagger imbued with the infinite power of the Cult of Admin.</Description>
       <RateOfFire>1.2</RateOfFire>
       <OldSound>daggerSwing</OldSound>
@@ -647,7 +652,7 @@
       <ArcGap>10</ArcGap>
       <BagType>6</BagType>
       <feedPower>100000</feedPower>
-       
+
    </Object>
    <Object type="0x9d3" id="Admin Staff">
       <Class>Equipment</Class>
@@ -657,6 +662,7 @@
          <Index>0xe4</Index>
       </Texture>
       <SlotType>17</SlotType>
+      <Admin/>
       <Description>A godly weapon belonging to the Cult of Admin.</Description>
       <RateOfFire>1.2</RateOfFire>
       <OldSound>magicShoot</OldSound>
@@ -674,7 +680,7 @@
       <ArcGap>0</ArcGap>
       <BagType>6</BagType>
       <feedPower>100000</feedPower>
-       
+
    </Object>
    <Object type="0x9c2" id="Admin Katana">
       <Class>Equipment</Class>
@@ -684,6 +690,7 @@
          <Index>0xe5</Index>
       </Texture>
       <SlotType>24</SlotType>
+      <Admin/>
       <Description>The finest katana, forged by the Cult of Admin. Its blade cuts anything.</Description>
       <RateOfFire>1.2</RateOfFire>
       <OldSound>bladeSwing</OldSound>
@@ -699,6 +706,6 @@
       <ArcGap>2</ArcGap>
       <BagType>6</BagType>
       <feedPower>100000</feedPower>
-       
+
    </Object>
 </Objects>

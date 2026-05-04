@@ -7,6 +7,7 @@
 			<Index>0x05</Index>
 		</Texture>
 		<SlotType>3</SlotType>
+		<Ethereal/>
 		<Description>A bow imbued with energy from faraway galaxies. It's origin is unknown.</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="On Ability use" description=""/>

@@ -440,6 +440,7 @@
 			<Index>0x6d</Index>
 		</Texture>
 		<SlotType>1</SlotType>
+		<Legendary/>
 		<Description>A slow but powerful sword that is a relic of a long forgotten age.</Description>
 		<RateOfFire>0.6</RateOfFire>
 		<Sound>weapon/glass_sword</Sound>
@@ -868,6 +869,7 @@
 			<Index>0x63</Index>
 		</Texture>
 		<SlotType>8</SlotType>
+		<Legendary/>
 		<Description>A sound almost like a wind chime emanates softly from this wand.</Description>
 		<RateOfFire>1.1</RateOfFire>
 		<Sound>weapon/wand_of_death</Sound>
@@ -893,6 +895,7 @@
 			<Index>0x6c</Index>
 		</Texture>
 		<SlotType>8</SlotType>
+		<Ascended/>
 		<Description>This strange weapon was used by ancient battle mages to deter invaders. The secret to its construction has long been lost.</Description>
 		<RateOfFire>0.33</RateOfFire>
 		<Sound>weapon/wand_of_death</Sound>
@@ -2102,6 +2105,7 @@
 			<Index>0x54</Index>
 		</Texture>
 		<SlotType>2</SlotType>
+		<Legendary/>
 		<Description>This legendary dagger was commissioned by a band of mad rogues to prove the worth of the Dirk.</Description>
 		<RateOfFire>0.9</RateOfFire>
 		<Sound>weapon/fire_dagger</Sound>
@@ -2521,6 +2525,7 @@
 			<Index>0x6a</Index>
 		</Texture>
 		<SlotType>3</SlotType>
+		<Ascended/>
 		<Description>No mortal can fire this dreaded bow without resting in between shots. It requires tremendous skill to wield.</Description>
 		<RateOfFire>0.33</RateOfFire>
 		<Sound>weapon/golden_bow</Sound>
@@ -4585,6 +4590,7 @@
 			<Index>0x480</Index>
 		</Texture>
 		<SlotType>9</SlotType>
+		<Ethereal/>
 		<Description>An eerie reminder of what lays in the depths of the Shatters.</Description>
 		<ActivateOnEquip stat="28" amount="6">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="20" amount="6">IncrementStat</ActivateOnEquip>
@@ -4602,6 +4608,7 @@
 			<Index>0x481</Index>
 		</Texture>
 		<SlotType>9</SlotType>
+		<Legendary/>
 		<Description>An odd stone, emanating a dark and mysterious energy.</Description>
 		<ActivateOnEquip stat="22" amount="6">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="21" amount="6">IncrementStat</ActivateOnEquip>
@@ -4619,6 +4626,7 @@
 			<Index>0x482</Index>
 		</Texture>
 		<SlotType>9</SlotType>
+		<Legendary/>
 		<Description>Wearing it makes you feel particularly strong.</Description>
 		<ActivateOnEquip stat="21" amount="6">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="20" amount="6">IncrementStat</ActivateOnEquip>
@@ -4926,6 +4934,7 @@
 			<Index>0x57</Index>
 		</Texture>
 		<SlotType>11</SlotType>
+		<Ethereal/>
 		<Description>This spell's destructive power is so notorious that casting it was banned for many generations.</Description>
 		<Sound>spell/magic_nova</Sound>
 		<Projectile>
@@ -5275,6 +5284,7 @@
 			<Index>0x6e</Index>
 		</Texture>
 		<SlotType>12</SlotType>
+		<Ethereal/>
 		<Description>A seal that is said to briefly borrow the power of the Gods themselves.  Some Paladins shun its dark power, others embrace it.</Description>
 		<Sound>spell/light_heal</Sound>
 		<ActivateOnEquip stat="22" amount="4">IncrementStat</ActivateOnEquip>
@@ -5957,6 +5967,7 @@
 			<Index>0x6f</Index>
 		</Texture>
 		<SlotType>15</SlotType>
+		<Ethereal/>
 		<Description>This strange quiver was created in a forgotten age by a lost tribe of Dark Elves.</Description>
 		<Sound>spell/fire_spray</Sound>
 		<Projectile>
@@ -6132,6 +6143,7 @@
 			<Index>0x52</Index>
 		</Texture>
 		<SlotType>16</SlotType>
+		<Ascended/>
 		<Description>This helm was forged of metal that fell from the sky.  It is strangely light and emits a faint hum.</Description>
 		<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip>
@@ -6862,6 +6874,7 @@
 			<Index>0x59</Index>
 		</Texture>
 		<SlotType>19</SlotType>
+		<Ethereal/>
 		<Description>This skull glows with the stolen soul of a phoenix trapped in the skull many years ago by Shaitan.</Description>
 		<Usable/>
 		<BagType>6</BagType>
@@ -7144,6 +7157,7 @@
 			<Index>0x55</Index>
 		</Texture>
 		<SlotType>21</SlotType>
+		<Legendary/>
 		<Description>This orb of ancient bloodstone has a dark reputation of twisting those who wield it.</Description>
 		<ActivateOnEquip stat="20" amount="2">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="28" amount="2">IncrementStat</ActivateOnEquip>
@@ -7424,6 +7438,7 @@
 			<Index>0x1d</Index>
 		</Texture>
 		<SlotType>2</SlotType>
+		<Ethereal/>
 		<Description>A chicken leg of doom.</Description>
 		<RateOfFire>0.9</RateOfFire>
 		<Sound>weapon/dirk</Sound>
@@ -7583,6 +7598,7 @@
 			<Index>0x46</Index>
 		</Texture>
 		<SlotType>9</SlotType>
+		<Ethereal/>
 		<Soulbound/>
 		<Description>A historical amulet that has been passed down for generations. Although once cursed in the past, it still holds a hint of its ancient power.</Description>
 		<ActivateOnEquip stat="20" amount="1">IncrementStat</ActivateOnEquip>
@@ -7605,6 +7621,7 @@
 			<Index>0xbb</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Ethereal/>
 		<Description>An incantation that unlocks the Wine Cellar. \n\nKeys can only be used once you have 10 or more stars!</Description>
 		<Sound>use_key</Sound>
 		<Consumable/>
@@ -7672,6 +7689,7 @@
 			<Index>0x0a</Index>
 		</Texture>
 		<SlotType>17</SlotType>
+		<Ascended/>
 		<Description>An ancient staff used both for sacrifice and communion with the gods.</Description>
 		<RateOfFire>1.1</RateOfFire>
 		<Sound>monster/djinn_hit</Sound>
@@ -7733,6 +7751,7 @@
 			<Index>0x0d</Index>
 		</Texture>
 		<SlotType>6</SlotType>
+		<Legendary/>
 		<Description>Mermaid-made armor woven from unbreakable coral threads.</Description>
 		<ActivateOnEquip stat="21" amount="16">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="28" amount="4">IncrementStat</ActivateOnEquip>
@@ -7767,6 +7786,7 @@
 			<Index>0x1a</Index>
 		</Texture>
 		<SlotType>3</SlotType>
+		<Ethereal/>
 		<Description>A deadly repeater crossbow and a marvel of craftsmanship. This mechanical weapon is efficient, but carries additional weight.</Description>
 		<RateOfFire>2</RateOfFire>
 		<Sound>weapon/heavy_crossbow</Sound>
@@ -7795,6 +7815,7 @@
 			<Index>0x1b</Index>
 		</Texture>
 		<SlotType>20</SlotType>
+		<Legendary/>
 		<Description>A trap imbued with deadly venom from the coral of the Ocean Trench.</Description>
 		<ActivateOnEquip stat="28" amount="2">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="22" amount="2">IncrementStat</ActivateOnEquip>
@@ -7860,6 +7881,7 @@
 			<Index>0x53</Index>
 		</Texture>
 		<SlotType>4</SlotType>
+		<Legendary/>
 		<Description>A tome dedicated to the works of a forgotten god. It is written in a strange script that glows with a pure white light.</Description>
 		<Sound>spell/major_heal</Sound>
 		<ActivateOnEquip stat="26" amount="4">IncrementStat</ActivateOnEquip>
@@ -7881,6 +7903,7 @@
 			<Index>0x1d</Index>
 		</Texture>
 		<SlotType>4</SlotType>
+		<Ascended/>
 		<Description>An ancient tome cloaked in white leather, created to aid in the struggle against the ultimate evil.</Description>
 		<Sound>spell/major_heal</Sound>
 		<ActivateOnEquip stat="26" amount="7">IncrementStat</ActivateOnEquip>
@@ -7921,6 +7944,7 @@
 			<Index>0x1f</Index>
 		</Texture>
 		<SlotType>9</SlotType>
+		<Ascended/>
 		<Description>A ring that symbolizes divine might.</Description>
 		<ActivateOnEquip stat="26" amount="5">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="27" amount="5">IncrementStat</ActivateOnEquip>
@@ -7981,6 +8005,7 @@
 			<Index>0x5d</Index>
 		</Texture>
 		<SlotType>17</SlotType>
+		<Ethereal/>
 		<Description>A staff that channels the ultimate force of Anatis.</Description>
 		<RateOfFire>0.25</RateOfFire>
 		<Sound>monster/chicken_death</Sound>
@@ -8080,6 +8105,7 @@
 			<Index>0xc9</Index>
 		</Texture>
 		<SlotType>2</SlotType>
+		<Ascended/>
 		<Description>A dagger that was condemned to Davy Jones' Locker.</Description>
 		<RateOfFire>1</RateOfFire>
 		<Sound>weapon/dirk</Sound>
@@ -8164,6 +8190,7 @@
 			<Index>0xcd</Index>
 		</Texture>
 		<SlotType>9</SlotType>
+		<Ethereal/>
 		<Description>An American hero's ring.</Description>
 		<ActivateOnEquip stat="21" amount="1">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="20" amount="1">IncrementStat</ActivateOnEquip>
@@ -8186,6 +8213,7 @@
 			<Index>0x1af</Index>
 		</Texture>
 		<SlotType>23</SlotType>
+		<Ascended/>
 		<Description>This scepter's blast is so powerful it will slow opponents.</Description>
 		<Sound>spell/magic_nova</Sound>
 		<ActivateOnEquip stat="20" amount="2">IncrementStat</ActivateOnEquip>
@@ -8446,12 +8474,12 @@
 		<SlotType>9</SlotType>
 		<Ethereal/>
 		<Description>An Olympic gold medal in synchronised swimming.</Description>
-		<ActivateOnEquip stat="28" amount="3">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="26" amount="3">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="22" amount="3">IncrementStat</ActivateOnEquip>
-		<FameBonus>3</FameBonus>
+		<ActivateOnEquip stat="28" amount="35">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="26" amount="35">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="22" amount="35">IncrementStat</ActivateOnEquip>
+		<FameBonus>8</FameBonus>
 		<BagType>6</BagType>
-		<feedPower>500</feedPower>
+		<feedPower>5000</feedPower>
 		<Soulbound/>
 	</Object>
 	<Object type="0xc3f" id="Silver Medal">
@@ -8464,12 +8492,12 @@
 		<SlotType>9</SlotType>
 		<Ascended/>
 		<Description>An Olympic silver medal in synchronised swimming.</Description>
-		<ActivateOnEquip stat="28" amount="2">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="26" amount="2">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="22" amount="2">IncrementStat</ActivateOnEquip>
-		<FameBonus>2</FameBonus>
+		<ActivateOnEquip stat="28" amount="25">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="26" amount="25">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="22" amount="25">IncrementStat</ActivateOnEquip>
+		<FameBonus>6</FameBonus>
 		<BagType>6</BagType>
-		<feedPower>350</feedPower>
+		<feedPower>3500</feedPower>
 		<Soulbound/>
 	</Object>
 	<Object type="0xc40" id="Bronze Medal">
@@ -8482,12 +8510,12 @@
 		<SlotType>9</SlotType>
 		<Legendary/>
 		<Description>An Olympic bronze medal in synchronised swimming.</Description>
-		<ActivateOnEquip stat="28" amount="1">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="26" amount="1">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="22" amount="1">IncrementStat</ActivateOnEquip>
-		<FameBonus>1</FameBonus>
+		<ActivateOnEquip stat="28" amount="15">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="26" amount="15">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip>
+		<FameBonus>4</FameBonus>
 		<BagType>6</BagType>
-		<feedPower>200</feedPower>
+		<feedPower>2000</feedPower>
 		<Soulbound/>
 	</Object>
 	<Object type="0xc41" id="Transformation Potion">
@@ -8931,7 +8959,8 @@
 			<Index>0x3db</Index>
 		</Texture>
 		<SlotType>24</SlotType>
-		<Description>A crappy katana that can barely cut anything.</Description>
+		<Ethereal/>
+		<Description>Used to be crappy, now it's something else...</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="" description="Mistake"/>
 		</ExtraTooltipData>
@@ -8957,6 +8986,7 @@
 			<Index>0x22a</Index>
 		</Texture>
 		<SlotType>24</SlotType>
+		<Legendary/>
 		<Description>A great katana charged with the power of the sun itself.</Description>
 		<RateOfFire>1</RateOfFire>
 		<Sound>weapon/long_sword</Sound>
@@ -9237,6 +9267,7 @@
 			<Index>0x232</Index>
 		</Texture>
 		<SlotType>25</SlotType>
+		<Ascended/>
 		<Description>A legendary shuriken that absorbs the light around it.</Description>
 		<Sound>spell/fire_spray</Sound>
 		<ExtraTooltipData>
@@ -9501,6 +9532,7 @@
 			<Index>0xea</Index>
 		</Texture>
 		<SlotType>27</SlotType>
+		<Legendary/>
 		<Description>A blade created within the Hellforge and enchanted with dark magics to grant its wielder the power of a demon king.</Description>
 		<Projectile>
 			<ObjectId>Wakizashi Fire</ObjectId>
@@ -9586,6 +9618,7 @@
 			<Index>0x37</Index>
 		</Texture>
 		<SlotType>1</SlotType>
+		<Admin/>
 		<Description>For Testing Monster Defense.</Description>
 		<RateOfFire>1</RateOfFire>
 		<Sound>weapon/blunt_sword</Sound>
@@ -9608,13 +9641,14 @@
 			<Index>0x28a</Index>
 		</Texture>
 		<SlotType>9</SlotType>
+		<Legendary/>
 		<Description>A high-fructose ring that will give you pep, but hurt your concentration.</Description>
 		<ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="26" amount="10">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="3" amount="-100">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="3" amount="155">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="27" amount="-10">IncrementStat</ActivateOnEquip>
 		<BagType>4</BagType>
-		<feedPower>400</feedPower>
+		<feedPower>4000</feedPower>
 		<Soulbound/>
 	</Object>
 	<Object type="0xc60" id="Rock Candy">
@@ -9642,6 +9676,7 @@
 			<Index>0x28c</Index>
 		</Texture>
 		<SlotType>7</SlotType>
+		<Legendary/>
 		<Description>Reinforced with magical hard candy from the candy forest. Sticky but strong.</Description>
 		<ActivateOnEquip stat="21" amount="30">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="28" amount="-10">IncrementStat</ActivateOnEquip>
@@ -9827,6 +9862,7 @@
 			<Index>0xf0</Index>
 		</Texture>
 		<SlotType>4</SlotType>
+		<Admin/>
 		<Description>A magical amulet that enables lightning assaults.</Description>
 		<Sound>spell/fire_nova</Sound>
 		<Usable/>
@@ -9846,6 +9882,7 @@
 			<Index>0x314</Index>
 		</Texture>
 		<SlotType>18</SlotType>
+		<Legendary/>
 		<Description>A foul poison harvested from the corpses of plague victims. It infects many targets, but kills slowly.</Description>
 		<ActivateOnEquip stat="20" amount="2">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="27" amount="2">IncrementStat</ActivateOnEquip>
@@ -9865,7 +9902,7 @@
 			<Index>0x315</Index>
 		</Texture>
 		<SlotType>10</SlotType>
-		<Description>A backpack that will double your inventory space!</Description>
+		<Description>Consume me for more inventory space!</Description>
 		<Sound>spell/light_heal</Sound>
 		<Consumable/>
 		<Backpack/>
@@ -9884,6 +9921,7 @@
 			<Index>0x316</Index>
 		</Texture>
 		<SlotType>7</SlotType>
+		<Ethereal/>
 		<Description>A worn and battered suit of armor embedded with a mystic gem that flows with magical strength.</Description>
 		<ExtraTooltipData>
 			<EffectInfo description="Power depletes on taking damage." name="Mystic Gem"/>
@@ -9907,6 +9945,7 @@
 			<Index>0x8f</Index>
 		</Texture>
 		<SlotType>8</SlotType>
+		<Ascended/>
 		<Description>A crude walking stick enchanted by Skuld's distinct style of sorcery, constructed to guide fallen spirits to the afterlife.</Description>
 		<ExtraTooltipData>
 			<EffectInfo description="Releases a Forgotten Soul when hit." name="Skuld's Enchantment"/>
@@ -10249,6 +10288,7 @@
 			<Index>0x3d7</Index>
 		</Texture>
 		<SlotType>6</SlotType>
+		<Admin/>
 		<Description>Only cheaters wear this armor.</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="" description="Mistake"/>
@@ -10266,6 +10306,7 @@
 			<Index>0x3d6</Index>
 		</Texture>
 		<SlotType>14</SlotType>
+		<Admin/>
 		<Description>Only cheaters wear this robe.</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="" description="Mistake"/>
@@ -10283,6 +10324,7 @@
 			<Index>0x3d8</Index>
 		</Texture>
 		<SlotType>7</SlotType>
+		<Admin/>
 		<Description>Only cheaters wear this armor.</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="" description="Mistake"/>
@@ -10316,6 +10358,7 @@
 			<Index>0x3d9</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Legendary/>
 		<Description>A lucky shamrock that will make enemies drop more and better loot! Lasts 20 minutes.</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="Duration" description="20 min"/>
@@ -10362,6 +10405,7 @@
 			<Index>0x3d0</Index>
 		</Texture>
 		<SlotType>6</SlotType>
+		<Ascended/>
 		<Description>Light armor crafted from the hard-as-steel leafy scales of a Leaf Dragon.</Description>
 		<ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="21" amount="13">IncrementStat</ActivateOnEquip>
@@ -10418,21 +10462,22 @@
 			<Index>0x53</Index>
 		</Texture>
 		<SlotType>24</SlotType>
+		<Ethereal/>
 		<Description>An ancient weapon imbued with the power of the cosmos.</Description>
 		<Sound>weapon/long_sword</Sound>
 		<RateOfFire>1</RateOfFire>
 		<Projectile>
 			<ObjectId>LOD Celestial Slash</ObjectId>
 			<Speed>130</Speed>
-			<MinDamage>200</MinDamage>
-			<MaxDamage>220</MaxDamage>
-			<LifetimeMS>400</LifetimeMS>
-			<Amplitude>0.65</Amplitude>
+			<MinDamage>285</MinDamage>
+			<MaxDamage>320</MaxDamage>
+			<LifetimeMS>600</LifetimeMS>
+			<Amplitude>0.25</Amplitude>
 			<Frequency>0.2</Frequency>
 		</Projectile>
 		<BagType>6</BagType>
-		<FameBonus>6</FameBonus>
-		<feedPower>850</feedPower>
+		<FameBonus>8</FameBonus>
+		<feedPower>5000</feedPower>
 		<OldSound>bladeSwing</OldSound>
 		<Soulbound/>
 	</Object>
@@ -10654,6 +10699,7 @@
 			<Index>0x403</Index>
 		</Texture>
 		<SlotType>1</SlotType>
+		<Legendary/>
 		<Description>Used only by the pirates who would make themselves kings, this cutlass is said to be cursed as each Pirate King seems to be killed rather unexpectedly.</Description>
 		<RateOfFire>1.3</RateOfFire>
 		<Sound>weapon/glass_sword</Sound>
@@ -10680,6 +10726,7 @@
 			<Index>0x404</Index>
 		</Texture>
 		<SlotType>24</SlotType>
+		<Legendary/>
 		<Description>Stuck in the maw of the Son of Arachna, this Katana is coated in the creature's poisonous venom. In the hands of the right person, this is a truly deadly weapon.</Description>
 		<RateOfFire>1.20</RateOfFire>
 		<Sound>weapon/long_sword</Sound>
@@ -10708,6 +10755,7 @@
 			<Index>0x405</Index>
 		</Texture>
 		<SlotType>3</SlotType>
+		<Ascended/>
 		<Description>Fashioned from the finest logs found within the Woodland Labyrinths, this bow uses sharp leaves instead of conventional arrows. Such lightweight ammunition allows for quick movement.</Description>
 		<RateOfFire>1.4</RateOfFire>
 		<Sound>weapon/golden_bow</Sound>
@@ -10737,14 +10785,15 @@
 			<Index>0x428</Index>
 		</Texture>
 		<SlotType>1</SlotType>
+		<Ethereal/>
 		<Description>This legendary sword is used to summon the beautiful power of bears.</Description>
-		<RateOfFire>0.33</RateOfFire>
+		<RateOfFire>0.85</RateOfFire>
 		<Sound>weapon/blunt_sword</Sound>
 		<Projectile>
 			<ObjectId>Bearshot</ObjectId>
-			<Speed>7</Speed>
-			<MinDamage>40</MinDamage>
-			<MaxDamage>70</MaxDamage>
+			<Speed>10</Speed>
+			<MinDamage>200</MinDamage>
+			<MaxDamage>385</MaxDamage>
 			<LifetimeMS>4000</LifetimeMS>
 			<Size>75</Size>
 			<Parametric/>
@@ -10763,21 +10812,22 @@
 			<Index>0x429</Index>
 		</Texture>
 		<SlotType>17</SlotType>
+		<Ethereal/>
 		<Description>Eucalyptus can be incredibly effective at looking awesome.</Description>
 		<RateOfFire>0.4</RateOfFire>
 		<Sound>weapon/sprite_wand</Sound>
 		<Projectile>
 			<ObjectId>Eucalyptus</ObjectId>
-			<Speed>110</Speed>
-			<MinDamage>40</MinDamage>
-			<MaxDamage>40</MaxDamage>
+			<Speed>180</Speed>
+			<MinDamage>195</MinDamage>
+			<MaxDamage>215</MaxDamage>
 			<LifetimeMS>364</LifetimeMS>
 			<Amplitude>0.15</Amplitude>
 			<Frequency>2</Frequency>
 		</Projectile>
 		<BagType>6</BagType>
 		<NumProjectiles>6</NumProjectiles>
-		<ArcGap>36</ArcGap>
+		<ArcGap>30</ArcGap>
 		<OldSound>magicShoot</OldSound>
 		<Soulbound/>
 	</Object>
@@ -10789,14 +10839,15 @@
 			<Index>0x42a</Index>
 		</Texture>
 		<SlotType>8</SlotType>
+		<Ethereal/>
 		<Description>The fabled weapon of the Sauce Boss himself.</Description>
 		<RateOfFire>1</RateOfFire>
 		<Sound>weapon/missile_wand</Sound>
 		<Projectile>
 			<ObjectId>hawt sawce</ObjectId>
 			<Speed>130</Speed>
-			<MinDamage>30</MinDamage>
-			<MaxDamage>50</MaxDamage>
+			<MinDamage>300</MinDamage>
+			<MaxDamage>310</MaxDamage>
 			<LifetimeMS>770</LifetimeMS>
 			<Wavy/>
 		</Projectile>
@@ -10812,19 +10863,20 @@
 			<Index>0x42b</Index>
 		</Texture>
 		<SlotType>3</SlotType>
+		<Ethereal/>
 		<Description>Toats sweet robobow bro!</Description>
 		<RateOfFire>1.5</RateOfFire>
 		<Sound>weapon/heavy_crossbow</Sound>
 		<Projectile>
 			<ObjectId>binary</ObjectId>
-			<Speed>50</Speed>
-			<MinDamage>20</MinDamage>
-			<MaxDamage>30</MaxDamage>
+			<Speed>75</Speed>
+			<MinDamage>295</MinDamage>
+			<MaxDamage>310</MaxDamage>
 			<LifetimeMS>1000</LifetimeMS>
 			<MultiHit/>
 		</Projectile>
 		<BagType>6</BagType>
-		<NumProjectiles>3</NumProjectiles>
+		<NumProjectiles>2</NumProjectiles>
 		<ArcGap>15</ArcGap>
 		<OldSound>arrowShoot</OldSound>
 		<Soulbound/>
@@ -10837,14 +10889,15 @@
 			<Index>0x42c</Index>
 		</Texture>
 		<SlotType>2</SlotType>
+		<Ethereal/>
 		<Description>Forged from sunshine, baby smiles, and the sparkle from unicorns.</Description>
 		<RateOfFire>0.5</RateOfFire>
 		<Sound>weapon/fire_dagger</Sound>
 		<Projectile>
 			<ObjectId>happy magic</ObjectId>
-			<Speed>30</Speed>
-			<MinDamage>15</MinDamage>
-			<MaxDamage>30</MaxDamage>
+			<Speed>55</Speed>
+			<MinDamage>150</MinDamage>
+			<MaxDamage>275</MaxDamage>
 			<LifetimeMS>1500</LifetimeMS>
 		</Projectile>
 		<BagType>6</BagType>
@@ -10859,16 +10912,17 @@
 			<Index>0x42d</Index>
 		</Texture>
 		<SlotType>24</SlotType>
+		<Ethereal/>
 		<Description>Battle for the Nexus: Never Forget.</Description>
 		<RateOfFire>0.5</RateOfFire>
 		<Sound>weapon/long_sword</Sound>
 		<Projectile>
 			<ObjectId>boss spawn</ObjectId>
-			<Speed>30</Speed>
-			<MinDamage>10</MinDamage>
-			<MaxDamage>40</MaxDamage>
+			<Speed>55</Speed>
+			<MinDamage>175</MinDamage>
+			<MaxDamage>225</MaxDamage>
 			<LifetimeMS>1600</LifetimeMS>
-			<Amplitude>0.5</Amplitude>
+			<Amplitude>0.2</Amplitude>
 			<Frequency>1</Frequency>
 			<MultiHit/>
 		</Projectile>
@@ -10885,6 +10939,7 @@
 			<Index>0x490</Index>
 		</Texture>
 		<SlotType>11</SlotType>
+		<Ethereal/>
 		<Description>Thought to have been lost to the ages, the wisdom imparted in this tablet will summon a power unrivaled by any modern spell.</Description>
 		<Sound>spell/magic_nova</Sound>
 		<Projectile>
@@ -11212,6 +11267,7 @@
 			<Index>0x4C6</Index>
 		</Texture>
 		<SlotType>17</SlotType>
+		<Legendary/>
 		<Description>A staff that glows with the warmth and color of the rising sun.</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="Set" description="Summer Solstice"/>
@@ -11242,6 +11298,7 @@
 			<Index>0x4C8</Index>
 		</Texture>
 		<SlotType>11</SlotType>
+		<Legendary/>
 		<Description>A spell that blasts enemies with the fiery force of a thousand suns.</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="Set" description="Summer Solstice"/>
@@ -11309,6 +11366,7 @@
 			<Index>0x4CA</Index>
 		</Texture>
 		<SlotType>3</SlotType>
+		<Ascended/>
 		<Description>A bow of light forged by the angels for use in their eternal struggle against darkness and evil.</Description>
 		<RateOfFire>0.33</RateOfFire>
 		<Sound>weapon/golden_bow</Sound>
@@ -11363,14 +11421,15 @@
 			<Index>0x4CE</Index>
 		</Texture>
 		<SlotType>2</SlotType>
+		<Ascended/>
 		<Description>A dagger imbued with Amethyst magic to protect its owner from harm.</Description>
 		<RateOfFire>1</RateOfFire>
 		<Sound>weapon/fire_dagger</Sound>
 		<Projectile>
 			<ObjectId>Amethyst Shift</ObjectId>
 			<Speed>140</Speed>
-			<MinDamage>95</MinDamage>
-			<MaxDamage>175</MaxDamage>
+			<MinDamage>125</MinDamage>
+			<MaxDamage>195</MaxDamage>
 			<LifetimeMS>400</LifetimeMS>
 		</Projectile>
 		<BagType>4</BagType>
@@ -11387,6 +11446,7 @@
 			<Index>0x4CF</Index>
 		</Texture>
 		<SlotType>1</SlotType>
+		<Ethereal/>
 		<Description>An odd energy source known for the amazing ability to fire hats.</Description>
 		<RateOfFire>0.25</RateOfFire>
 		<Sound>weapon/mithril_sword</Sound>
@@ -11394,10 +11454,10 @@
 			<ObjectId>Hat Cascade</ObjectId>
 			<Speed>50</Speed>
 			<LifetimeMS>1000</LifetimeMS>
-			<MinDamage>10</MinDamage>
-			<MaxDamage>15</MaxDamage>
+			<MinDamage>100</MinDamage>
+			<MaxDamage>150</MaxDamage>
 			<Amplitude>0.15</Amplitude>
-			<Frequency>2</Frequency>
+			<Frequency>4</Frequency>
 		</Projectile>
 		<ArcGap>36</ArcGap>
 		<NumProjectiles>10</NumProjectiles>
@@ -11413,20 +11473,21 @@
 			<Index>0x4D1</Index>
 		</Texture>
 		<SlotType>3</SlotType>
+		<Ethereal/>
 		<Description>Meow! Meow meow meow! MEOWMEOWMEOW.</Description>
 		<RateOfFire>0.25</RateOfFire>
 		<Sound>weapon/heavy_crossbow</Sound>
 		<Projectile>
 			<ObjectId>Cat Cavalcade</ObjectId>
-			<Speed>25</Speed>
+			<Speed>45</Speed>
 			<LifetimeMS>2000</LifetimeMS>
-			<MinDamage>10</MinDamage>
-			<MaxDamage>15</MaxDamage>
+			<MinDamage>100</MinDamage>
+			<MaxDamage>150</MaxDamage>
 			<Amplitude>2</Amplitude>
 			<Frequency>2</Frequency>
 		</Projectile>
 		<BagType>4</BagType>
-		<NumProjectiles>5</NumProjectiles>
+		<NumProjectiles>3</NumProjectiles>
 		<ArcGap>15</ArcGap>
 		<OldSound>arrowShoot</OldSound>
 	</Object>
@@ -11438,6 +11499,7 @@
 			<Index>0x4D2</Index>
 		</Texture>
 		<SlotType>17</SlotType>
+		<Ethereal/>
 		<Description>Made by a pretty lazy wizard. Hope it makes something worthwhile.</Description>
 		<RateOfFire>0.3</RateOfFire>
 		<Sound>weapon/wand_of_death</Sound>
@@ -11445,8 +11507,8 @@
 			<ObjectId>Space Junk</ObjectId>
 			<Speed>50</Speed>
 			<LifetimeMS>1000</LifetimeMS>
-			<MinDamage>10</MinDamage>
-			<MaxDamage>20</MaxDamage>
+			<MinDamage>100</MinDamage>
+			<MaxDamage>200</MaxDamage>
 			<Amplitude>0.5</Amplitude>
 			<Frequency>1</Frequency>
 		</Projectile>
@@ -11464,6 +11526,7 @@
 			<Index>0x4D0</Index>
 		</Texture>
 		<SlotType>8</SlotType>
+		<Ethereal/>
 		<Description>Created by a lonely Sorcerer. This sentient eye doesn't make a very good friend. It does, however, make fruit.</Description>
 		<RateOfFire>0.25</RateOfFire>
 		<Sound>weapon/wand_of_death</Sound>
@@ -11471,8 +11534,8 @@
 			<ObjectId>Fruitpocalypse</ObjectId>
 			<Speed>12.5</Speed>
 			<LifetimeMS>3000</LifetimeMS>
-			<MinDamage>20</MinDamage>
-			<MaxDamage>40</MaxDamage>
+			<MinDamage>200</MinDamage>
+			<MaxDamage>400</MaxDamage>
 			<Parametric/>
 			<PassesCover/>
 		</Projectile>
@@ -11489,6 +11552,7 @@
 			<Index>0x4D3</Index>
 		</Texture>
 		<SlotType>2</SlotType>
+		<Ethereal/>
 		<Description>This was all the rage a few Winter Solstices ago.</Description>
 		<RateOfFire>0.75</RateOfFire>
 		<Sound>weapon/fire_dagger</Sound>
@@ -11496,8 +11560,8 @@
 			<ObjectId>Toy Attack</ObjectId>
 			<Speed>50</Speed>
 			<LifetimeMS>1000</LifetimeMS>
-			<MinDamage>50</MinDamage>
-			<MaxDamage>50</MaxDamage>
+			<MinDamage>250</MinDamage>
+			<MaxDamage>350</MaxDamage>
 		</Projectile>
 		<BagType>4</BagType>
 		<OldSound>daggerSwing</OldSound>
@@ -12048,6 +12112,7 @@
 			<Index>0x550</Index>
 		</Texture>
 		<SlotType>17</SlotType>
+		<Ascended/>
 		<Description>Perhaps all that remains of Esben, whoever he was.\n\nSprite Credits: Pfiffel</Description>
 		<RateOfFire>0.8</RateOfFire>
 		<Sound>weapon/sprite_wand</Sound>
@@ -13067,6 +13132,7 @@
 		<Class>Equipment</Class>
 		<Item/>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Texture>
 			<File>lofiObj2</File>
 			<Index>0x15a</Index>
@@ -13084,6 +13150,7 @@
 			<Index>50</Index>
 		</AnimatedTexture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Ready to dupe?</Description>
 		<Activate id="Crash">Create</Activate>
 		<Consumable/>
@@ -13117,6 +13184,7 @@
 			<Index>0x56e</Index>
 		</Texture>
 		<SlotType>24</SlotType>
+		<Ascended/>
 		<Description>An astronomically heavy katana. It is forged from dark matter.</Description>
 		<RateOfFire>0.3</RateOfFire>
 		<Sound>weapon/long_sword</Sound>
@@ -13145,6 +13213,7 @@
 			<Index>0x571</Index>
 		</Texture>
 		<SlotType>18</SlotType>
+		<Legendary/>
 		<Description>A deadly substance concocted with ingredients found in the sewers.</Description>
 		<Usable/>
 		<BagType>6</BagType>
@@ -13235,6 +13304,7 @@
 			<Index>0x2c</Index>
 		</Texture>
 		<SlotType>22</SlotType>
+		<Legendary/>
 		<Description>Seemingly bleak at first, this prism has erratic magical properties looming inside, which affect the light it scatters in unforeseen ways.</Description>
 		<Projectile>
 			<ObjectId>Dire Blast</ObjectId>
@@ -13300,6 +13370,7 @@
 		<Class>Equipment</Class>
 		<Item/>
 		<SlotType>23</SlotType>
+		<Legendary/>
 		<Usable/>
 		<Texture>
 			<File>cnidarianReefObjects8x8</File>
@@ -13349,6 +13420,7 @@
 			<Index>0x94</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Because what kind of monster would trick their fellows with a fake one?</Description>
 		<Consumable/>
 		<BagType>2</BagType>
@@ -13458,6 +13530,7 @@
 			<Index>0x0f</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>It's healthy!\nInstantly grants level 20. Permanently increases attack, defense, speed, dexterity, vitality and wisdom by 20. Also adds a Backpack. Only usable once per character.</Description>
 		<Sound>use_potion</Sound>
 		<Activate stat="20" amount="20">IncrementStat</Activate>
@@ -13466,7 +13539,6 @@
 		<Activate stat="26" amount="20">IncrementStat</Activate>
 		<Activate stat="27" amount="20">IncrementStat</Activate>
 		<Activate stat="28" amount="20">IncrementStat</Activate>
-		<Activate stat="6" amount="18050">IncrementStat</Activate>
 		<Activate>Backpack</Activate>
 		<Consumable/>
 		<Backpack/>
@@ -13483,6 +13555,7 @@
 			<Index>0xcd</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Instantly grants level 20.</Description>
 		<Sound>use_potion</Sound>
 		<Activate stat="6" amount="18050">IncrementStat</Activate>
@@ -13500,6 +13573,7 @@
 			<Index>0xcd</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Spawns 500 Fame worth of chicken! Also functions as high quality pet food. Yum!\n\nConsume responsibly!</Description>
 		<Sound>use_potion</Sound>
 		<Activate objectId="Fame Chicken Spawner">Pet</Activate>
@@ -13512,6 +13586,7 @@
 		<Class>Equipment</Class>
 		<Item/>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Texture>
 			<File>lofiChar8x8</File>
 			<Index>0xcd</Index>
@@ -13526,6 +13601,7 @@
 		<Class>Equipment</Class>
 		<Item/>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Texture>
 			<File>lofiObj3</File>
 			<Index>0xe0</Index>
@@ -13546,6 +13622,7 @@
 			<Index>0xe2</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Summon a trail of buddies that follow you around.</Description>
 		<Sound>use_potion</Sound>
 		<Activate objectId="Dragon Chain 1">Pet</Activate>
@@ -13701,6 +13778,7 @@
 			<Index>0x1f</Index>
 		</Texture>
 		<SlotType>9</SlotType>
+		<Ethereal/>
 		<Description>An ancient artifact, once worn by a corrupt king of the frost realms.\n\nSprite Credits: Poshun</Description>
 		<ActivateOnEquip stat="28" amount="6">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="20" amount="6">IncrementStat</ActivateOnEquip>
@@ -13733,6 +13811,7 @@
 			<Index>0x25</Index>
 		</Texture>
 		<SlotType>4</SlotType>
+		<Legendary/>
 		<Description>A tome that allows the caster to encase themselves in extremely durable ice. However, despite being nearly impenetrable, it will melt after a while.\n\nSprite Credits: Poshun</Description>
 		<Sound>spell/major_heal</Sound>
 		<ActivateOnEquip stat="26" amount="4">IncrementStat</ActivateOnEquip>
@@ -13901,6 +13980,7 @@
 			<Index>0x2f</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>A bag covered in moss that contains rewards!</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="Event" description="MotMG"/>
@@ -13920,6 +14000,7 @@
 			<Index>0x2d</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>A bag made of stone that contains rewards!</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="Event" description="MotMG"/>
@@ -13939,6 +14020,7 @@
 			<Index>0x30</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>The Mad God's own loot bag. It contains rewards!</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="Event" description="MotMG"/>
@@ -13957,6 +14039,7 @@
 			<Index>0x6b</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Merry Oryxmas! Open the box to receive a random Oryxmas Tier 6 Ability!</Description>
 		<Activate>MysteryDyes</Activate>
 		<Consumable/>
@@ -13972,6 +14055,7 @@
 			<Index>0x69</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Merry Oryxmas! Open the box to receive a random Oryxmas pet skin!\n\n*Red Nose\n*Helper Bagston\n*Red Helper Bagston\n*Gingerbread Man\n*Mini Polaris\n*Festive Slurp\n*Holiday Penguin\n*Young Elk\n*Krampus\n*Christmas Tree</Description>
 		<Activate>MysteryDyes</Activate>
 		<Consumable/>
@@ -13987,6 +14071,7 @@
 			<Index>0x6a</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Merry Oryxmas! Open the box to get a random Oryxmas Gift!</Description>
 		<Activate>MysteryDyes</Activate>
 		<Consumable/>
@@ -14002,6 +14087,7 @@
 			<Index>0x14</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Crack the Egg open to receive the reward inside!</Description>
 		<Activate>MysteryDyes</Activate>
 		<Consumable/>
@@ -14017,6 +14103,7 @@
 			<Index>0x5b2</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Open the Goodie Bag for a reward!</Description>
 		<Activate>MysteryDyes</Activate>
 		<Consumable/>
@@ -14032,6 +14119,7 @@
 			<Index>0x5b3</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Open the Goodie Bag for a reward!</Description>
 		<Activate>MysteryDyes</Activate>
 		<Consumable/>
@@ -14047,6 +14135,7 @@
 			<Index>0x5b4</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Open the Goodie Bag for a reward!</Description>
 		<Activate>MysteryDyes</Activate>
 		<Consumable/>
@@ -14062,6 +14151,7 @@
 			<Index>0x5b5</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Open the Goodie Bag for a reward!</Description>
 		<Activate>MysteryDyes</Activate>
 		<Consumable/>
@@ -14077,6 +14167,7 @@
 			<Index>0x5b6</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Open the Goodie Bag for a reward!</Description>
 		<Activate>MysteryDyes</Activate>
 		<Consumable/>
@@ -14092,6 +14183,7 @@
 			<Index>0x5b7</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Open the Goodie Bag for a reward!</Description>
 		<Activate>MysteryDyes</Activate>
 		<Consumable/>
@@ -14107,6 +14199,7 @@
 			<Index>0x5b8</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Open the Goodie Bag for a reward!</Description>
 		<Activate>MysteryDyes</Activate>
 		<Consumable/>
@@ -14212,6 +14305,7 @@
 			<Index>0x9d</Index>
 		</Texture>
 		<SlotType>8</SlotType>
+		<Legendary/>
 		<Description>Made from a cherry tree branch. This wand was gifted by Xil to Daichi for bringing him into this world.</Description>
 		<RateOfFire>0.85</RateOfFire>
 		<Sound>weapon/wand_of_death</Sound>
@@ -14239,6 +14333,7 @@
 			<Index>0x9e</Index>
 		</Texture>
 		<SlotType>25</SlotType>
+		<Ethereal/>
 		<Description>Imbued with energy from another place, the blade will pierce through any foe.</Description>
 		<Sound>spell/fire_spray</Sound>
 		<ExtraTooltipData>
@@ -14305,6 +14400,7 @@
 			<Index>0x20</Index>
 		</Texture>
 		<SlotType>16</SlotType>
+		<Legendary/>
 		<Description>Made from the remains of a violent bunny, whoever wears this helm is given the magical ability to hop as fast as a bunny!</Description>
 		<ActivateOnEquip stat="21" amount="5">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip>
@@ -14504,6 +14600,7 @@
 			<Index>0x21</Index>
 		</Texture>
 		<SlotType>2</SlotType>
+		<Ethereal/>
 		<RateOfFire>1</RateOfFire>
 		<Description>The blade of this dagger was once the enormous Killer Bee Queen's stinger. It remains exceptionally sharp, and could easily cut through even the heaviest of armor in a single strike.</Description>
 		<OldSound>bladeSwing</OldSound>
@@ -14531,6 +14628,7 @@
 			<Index>0x62</Index>
 		</Texture>
 		<SlotType>16</SlotType>
+		<Ethereal/>
 		<Description>A nefarious helm combining pheromones and Killer Honey to captivate Killer Bees into servitude.</Description>
 		<Sound>spell/fire_spray</Sound>
 		<Usable/>
@@ -14562,9 +14660,10 @@
 			<Index>0x4b</Index>
 		</Texture>
 		<SlotType>15</SlotType>
+		<Legendary/>
 		<Description>A quiver crafted from the remains of a yellow Beehemoth, filled with razor-sharp arrows fashioned from Killer Bee stingers.</Description>
-		<ActivateOnEquip stat="20" amount="3">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="28" amount="3">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
 		<Usable/>
 		<Projectile>
 			<ObjectId>EH Arrow Shot</ObjectId>
@@ -14597,9 +14696,10 @@
 			<Index>0x4c</Index>
 		</Texture>
 		<SlotType>15</SlotType>
+		<Ascended/>
 		<Description>A quiver crafted from the remains of a red Beehemoth, filled with razor-sharp arrows fashioned from Killer Bee stingers.</Description>
-		<ActivateOnEquip stat="20" amount="3">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="28" amount="3">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="20" amount="15">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="28" amount="15">IncrementStat</ActivateOnEquip>
 		<Usable/>
 		<Projectile>
 			<ObjectId>EH Red Arrow Shot</ObjectId>
@@ -14632,9 +14732,10 @@
 			<Index>0x4d</Index>
 		</Texture>
 		<SlotType>15</SlotType>
+		<Ascended/>
 		<Description>A quiver crafted from the remains of a blue Beehemoth, filled with razor-sharp arrows fashioned from Killer Bee stingers.</Description>
-		<ActivateOnEquip stat="20" amount="3">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="28" amount="3">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="20" amount="10">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="28" amount="10">IncrementStat</ActivateOnEquip>
 		<Usable/>
 		<Projectile>
 			<ObjectId>EH Blue Arrow Shot</ObjectId>
@@ -14962,6 +15063,7 @@
 		</Texture>
 		<Usable/>
 		<SlotType>12</SlotType>
+		<Ascended/>
 		<BagType>6</BagType>
 		<FameBonus>6</FameBonus>
 		<MpCost>135</MpCost>
@@ -14985,6 +15087,7 @@
 			<Index>40</Index>
 		</Texture>
 		<SlotType>17</SlotType>
+		<Legendary/>
 		<Description>A commanding staff used by vile cult leaders. It has a strange force inside it that prevents it from facing forward of the user.</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="" description="Shoots backwards"/>
@@ -15048,6 +15151,7 @@
 			<Index>0xa7</Index>
 		</Texture>
 		<SlotType>3</SlotType>
+		<Ethereal/>
 		<Description>Every shot that hits a target frees the soul of a forgotten hero. Every shot that misses is trapped for eternity.</Description>
 		<RateOfFire>1</RateOfFire>
 		<Sound>weapon/golden_bow</Sound>
@@ -15076,6 +15180,7 @@
 			<Index>0xa8</Index>
 		</Texture>
 		<SlotType>15</SlotType>
+		<Ascended/>
 		<Description>A mysterious quiver formed of pure evil and dark matter. Its ethereal existence creates a small implosion of nearby atmosphere when drawn.</Description>
 		<Sound>spell/fire_spray</Sound>
 		<Projectile>
@@ -15125,6 +15230,7 @@
 			<Index>0xaa</Index>
 		</Texture>
 		<SlotType>9</SlotType>
+		<Legendary/>
 		<Description>Unknown.</Description>
 		<ActivateOnEquip stat="0" amount="110">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="3" amount="110">IncrementStat</ActivateOnEquip>
@@ -15142,18 +15248,19 @@
 			<Index>0xab</Index>
 		</Texture>
 		<SlotType>9</SlotType>
+		<Ethereal/>
 		<Description>An unfathomable amount of strength pulses through this ring. Only the most righteous mortals can touch this ring and live.</Description>
-		<ActivateOnEquip stat="0" amount="80">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="3" amount="80">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="20" amount="4">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="21" amount="4">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="22" amount="4">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="28" amount="4">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="26" amount="4">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="27" amount="4">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="0" amount="125">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="3" amount="125">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="20" amount="8">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="21" amount="8">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="22" amount="8">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="28" amount="6">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="26" amount="6">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="27" amount="6">IncrementStat</ActivateOnEquip>
 		<BagType>6</BagType>
-		<FameBonus>7</FameBonus>
-		<feedPower>1500</feedPower>
+		<FameBonus>8</FameBonus>
+		<feedPower>2500</feedPower>
 		<Soulbound/>
 	</Object>
 	<Object type="0x0250" id="Skull of Corrupted Souls">
@@ -15218,6 +15325,7 @@
 			<Index>0xb0</Index>
 		</Texture>
 		<SlotType>1</SlotType>
+		<Ethereal/>
 		<Description>A sword with an impossibly sharp edge. It has been designed with holy magic to slash like no other blade.</Description>
 		<RateOfFire>1</RateOfFire>
 		<Sound>weapon/golden_bow</Sound>
@@ -15225,17 +15333,17 @@
 			<ObjectId>Colossus Slash</ObjectId>
 			<Speed>100</Speed>
 			<MinDamage>280</MinDamage>
-			<MaxDamage>295</MaxDamage>
+			<MaxDamage>325</MaxDamage>
 			<LifetimeMS>450</LifetimeMS>
-			<Amplitude>0.7</Amplitude>
-			<Frequency>0.5</Frequency>
+			<Amplitude>0.5</Amplitude>
+			<Frequency>0.8</Frequency>
 			<FaceDir/>
 		</Projectile>
 		<BagType>6</BagType>
-		<FameBonus>6</FameBonus>
-		<NumProjectiles>1</NumProjectiles>
+		<FameBonus>8</FameBonus>
+		<NumProjectiles>2</NumProjectiles>
 		<OldSound>bladeSwing</OldSound>
-		<feedPower>1200</feedPower>
+		<feedPower>2500</feedPower>
 		<Soulbound/>
 	</Object>
 	<Object type="0x0255" id="Breastplate of New Life">
@@ -15247,6 +15355,7 @@
 			<Index>0xb1</Index>
 		</Texture>
 		<SlotType>7</SlotType>
+		<Legendary/>
 		<ActivateOnEquip stat="21" amount="14">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="0" amount="160">IncrementStat</ActivateOnEquip>
 		<BagType>6</BagType>
@@ -15281,17 +15390,18 @@
 		</Texture>
 		<Usable/>
 		<SlotType>13</SlotType>
+		<Ethereal/>
 		<Description>Many Rogues have tried to use this to escape their asylum. All have failed.</Description>
 		<MpCost>95</MpCost>
 		<Activate effect="Invisible" duration="4.5">ConditionEffectSelf</Activate>
 		<Activate effect="Slowed" duration="3">ConditionEffectSelf</Activate>
 		<Activate stat="20" amount="25" duration="3.5">StatBoostSelf</Activate>
-		<ActivateOnEquip stat="21" amount="2">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="26" amount="2">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="21" amount="6">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="26" amount="4">IncrementStat</ActivateOnEquip>
 		<Cooldown>6</Cooldown>
 		<BagType>6</BagType>
-		<FameBonus>6</FameBonus>
-		<feedPower>1300</feedPower>
+		<FameBonus>8</FameBonus>
+		<feedPower>2500</feedPower>
 		<Soulbound/>
 	</Object>
 	<Object type="0x1e26" id="Mark of Septavius">
@@ -15964,6 +16074,7 @@
 		<Class>Equipment</Class>
 		<Item/>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Texture>
 			<File>d2LofiObjEmbed</File>
 			<Index>0x32</Index>
@@ -15979,6 +16090,7 @@
 		<Class>Equipment</Class>
 		<Item/>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Texture>
 			<File>d2LofiObjEmbed</File>
 			<Index>0x1af</Index>
@@ -16177,17 +16289,18 @@
 			<Index>0x35</Index>
 		</Texture>
 		<SlotType>16</SlotType>
+		<Ethereal/>
 		<Description>This unorthodox helm was created by carving out a pumpkin that is found only in the darkest pumpkin patches. Donning this cursed piece of equipment is said to cause the wearer to fly into a fit of rage.</Description>
-		<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="21" amount="15">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="22" amount="10">IncrementStat</ActivateOnEquip>
 		<Usable/>
 		<BagType>6</BagType>
-		<FameBonus>6</FameBonus>
+		<FameBonus>8</FameBonus>
 		<MpCost>90</MpCost>
-		<Activate effect="Berserk" duration="4.5" range="4">ConditionEffectAura</Activate>
-		<Activate effect="Armored" duration="4.5">ConditionEffectSelf</Activate>
-		<Cooldown>6</Cooldown>
-		<feedPower>1250</feedPower>
+		<Activate effect="Berserk" duration="6.5" range="3">ConditionEffectAura</Activate>
+		<Activate effect="Armored" duration="7.5">ConditionEffectSelf</Activate>
+		<Cooldown>4</Cooldown>
+		<feedPower>2500</feedPower>
 		<Soulbound/>
 	</Object>
 	<Object type="0x1795" id="Halloween Mystery Skin">
@@ -16382,6 +16495,7 @@
 			<Index>0x07</Index>
 		</Texture>
 		<SlotType>11</SlotType>
+		<Legendary/>
 		<Sound>spell/magic_nova</Sound>
 		<Projectile>
 			<ObjectId>pD Spell Shot</ObjectId>
@@ -16396,9 +16510,9 @@
 			<PassesCover/>
 		</Projectile>
 		<ActivateOnEquip stat="0" amount="-20">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="20" amount="2">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="20" amount="4">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="28" amount="4">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="21" amount="2">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="21" amount="4">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="26" amount="-5">IncrementStat</ActivateOnEquip>
 		<Usable/>
 		<BagType>6</BagType>
@@ -16418,6 +16532,7 @@
 			<Index>0x08</Index>
 		</Texture>
 		<SlotType>4</SlotType>
+		<Legendary/>
 		<Sound>spell/major_heal</Sound>
 		<ActivateOnEquip stat="0" amount="-20">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="20" amount="4">IncrementStat</ActivateOnEquip>
@@ -16442,17 +16557,18 @@
 			<Index>0x09</Index>
 		</Texture>
 		<SlotType>23</SlotType>
+		<Ethereal/>
 		<Sound>spell/magic_nova</Sound>
-		<ActivateOnEquip stat="20" amount="4">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="27" amount="2">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="0" amount="-20">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="26" amount="-5">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="20" amount="6">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="27" amount="6">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="0" amount="85">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="26" amount="25">IncrementStat</ActivateOnEquip>
 		<Usable/>
 		<BagType>6</BagType>
-		<FameBonus>6</FameBonus>
+		<FameBonus>8</FameBonus>
 		<MpCost>80</MpCost>
-		<Activate arcDegrees="15" totalDamage="820" decrDamage="20" wisDamageBase="100" maxTargets="1" color="0xE28A8A" wisPerTarget="20">Lightning</Activate>
-		<feedPower>900</feedPower>
+		<Activate arcDegrees="15" totalDamage="1020" decrDamage="20" wisDamageBase="150" maxTargets="1" color="0xE28A8A" wisPerTarget="20">Lightning</Activate>
+		<feedPower>2500</feedPower>
 		<Soulbound/>
 	</Object>
 	<Object type="0x7ba" id="pD Armor">
@@ -16465,10 +16581,11 @@
 			<Index>0x0a</Index>
 		</Texture>
 		<SlotType>7</SlotType>
+		<Admin/>
 		<ActivateOnEquip stat="21" amount="25">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip>
-		<ActivateOnEquip stat="26" amount="-5">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="22" amount="50">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="26" amount="500">IncrementStat</ActivateOnEquip>
 		<BagType>6</BagType>
 		<FameBonus>6</FameBonus>
 		<feedPower>800</feedPower>
@@ -19147,6 +19264,7 @@
 			<Index>0x7b</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Drink me!\n\nDoes not count as potion when used.\n\nUsing this on a character that is already lv. 20 will consume the item and have no effect.</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="Effect" description="Boosts your character to lv. 20!"/>
@@ -19167,6 +19285,7 @@
 			<Index>0x7b</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Drink me!\n\nDoes not count as potion when used.\n\nUsing this on a character that is already lv. 20 will consume the item and have no effect.</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="Effect" description="Boosts your character to lv. 20!"/>
@@ -19189,6 +19308,7 @@
 			<Index>0x7b</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Drink me!\n\nDoes not count as potion when used.\n\nUsing this on a character that is already lv. 20 will consume the item and have no effect.</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="Effect" description="Boosts your character to lv. 20!"/>
@@ -19211,6 +19331,7 @@
 			<Index>0x7b</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Drink me!\n\nDoes not count as potion when used.\n\nUsing this on a character that is already lv. 20 will consume the item and have no effect.</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="Effect" description="Boosts your character to lv. 20!"/>
@@ -19233,6 +19354,7 @@
 			<Index>0x7b</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>Drink me!\n\nDoes not count as potion when used.\n\nUsing this on a character that is already lv. 20 will consume the item and have no effect.</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="Effect" description="Boosts your character to lv. 20!"/>
@@ -19283,6 +19405,7 @@
 			<Index>0xa7</Index>
 		</Texture>
 		<SlotType>11</SlotType>
+		<Admin/>
 		<Description>This strange weapon sometimes affects the size of surrounding creatures.</Description>
 		<Sound>spell/magic_nova</Sound>
 		<Projectile>
@@ -19311,6 +19434,7 @@
 			<Index>0xa3</Index>
 		</Texture>
 		<SlotType>24</SlotType>
+		<Admin/>
 		<Description>Omae wa...</Description>
 		<RateOfFire>1.20</RateOfFire>
 		<Sound>weapon/long_sword</Sound>
@@ -19338,6 +19462,7 @@
 			<Index>0xa5</Index>
 		</Texture>
 		<SlotType>1</SlotType>
+		<Admin/>
 		<Description>When you have this hammer, you don't need a reason to use it.</Description>
 		<RateOfFire>0.33</RateOfFire>
 		<Sound>weapon/blunt_sword</Sound>
@@ -19366,6 +19491,7 @@
 			<Index>0xa1</Index>
 		</Texture>
 		<SlotType>11</SlotType>
+		<Admin/>
 		<Description>A grand scroll capable of summoning sharpened emerald shards, slicing through even the most durable opponent.</Description>
 		<Sound>spell/magic_nova</Sound>
 		<Projectile>
@@ -19395,6 +19521,7 @@
 			<Index>0xa0</Index>
 		</Texture>
 		<SlotType>13</SlotType>
+		<Admin/>
 		<Description>A pitch black cloak enhanced with the defensive strength of Oryx's own signature armor.</Description>
 		<Sound>spell/fire_nova</Sound>
 		<Usable/>
@@ -19415,6 +19542,7 @@
 			<Index>0xa2</Index>
 		</Texture>
 		<SlotType>5</SlotType>
+		<Admin/>
 		<Description>This shimmering shield allows knights to enhance their concentration on targets, giving them more time to think about their next move in battle.</Description>
 		<Sound>spell/fire_spray</Sound>
 		<Projectile>
@@ -19547,6 +19675,7 @@
 			<Index>0x3f</Index>
 		</Texture>
 		<SlotType>17</SlotType>
+		<Legendary/>
 		<Description>Adult male basilisks are apex predators, and at full maturity their tails gain the unique ability to release piercing acid from the tip.</Description>
 		<RateOfFire>0.33</RateOfFire>
 		<Sound>weapon/wand_of_death</Sound>
@@ -19895,6 +20024,7 @@
 			<Index>0xd1</Index>
 		</Texture>
 		<SlotType>4</SlotType>
+		<Admin/>
 		<Description>This tome was carried to battle by the members of a forgotten order.</Description>
 		<Sound>spell/major_heal</Sound>
 		<ActivateOnEquip stat="22" amount="7">IncrementStat</ActivateOnEquip>
@@ -19916,6 +20046,7 @@
 			<Index>0xd3</Index>
 		</Texture>
 		<SlotType>16</SlotType>
+		<Admin/>
 		<Description>This helm was worn by the elite guardians of a long lost empire.</Description>
 		<ActivateOnEquip stat="21" amount="12">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip>
@@ -19938,6 +20069,7 @@
 			<Index>0xd2</Index>
 		</Texture>
 		<SlotType>12</SlotType>
+		<Admin/>
 		<Description>The Paladins of Lira-Tin used this seal to reach high level of focus during their training.</Description>
 		<Sound>spell/light_heal</Sound>
 		<ActivateOnEquip stat="20" amount="4">IncrementStat</ActivateOnEquip>
@@ -20520,6 +20652,7 @@
 			<Index>0x105</Index>
 		</Texture>
 		<SlotType>22</SlotType>
+		<Admin/>
 		<Description>All that glitters is not gold. Beware, tricksters who choose this dastardly prism must be committed to their cruel prank.</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="" description="Mistake"/>
@@ -21197,14 +21330,15 @@
 			<Index>0x4b</Index>
 		</Texture>
 		<SlotType>2</SlotType>
+		<Legendary/>
 		<Description>A fragment of Lord Ruthven's curse manifest itself into this pulsating dagger. Its formless state allows it to cut in ways no other weapon could.</Description>
 		<RateOfFire>1.3</RateOfFire>
 		<Sound>weapon/fire_dagger</Sound>
 		<Projectile>
 			<ObjectId>Corruption Cut</ObjectId>
 			<Speed>140</Speed>
-			<MinDamage>75</MinDamage>
-			<MaxDamage>85</MaxDamage>
+			<MinDamage>100</MinDamage>
+			<MaxDamage>135</MaxDamage>
 			<LifetimeMS>400</LifetimeMS>
 			<Amplitude>1.5</Amplitude>
 			<Frequency>0.7</Frequency>
@@ -21283,6 +21417,7 @@
 			<Index>0x0f</Index>
 		</Texture>
 		<SlotType>10</SlotType>
+		<Admin/>
 		<Description>It's healthy!\nMaxes any class to 8/8 and adds a Backpack.</Description>
 		<Sound>use_potion</Sound>
 		<Activate stat="0" amount="2000">IncrementStat</Activate>
@@ -21632,6 +21767,7 @@
 			<Index>0x110</Index>
 		</Texture>
 		<SlotType>17</SlotType>
+		<Ascended/>
 		<Description>A rod composed of solid foramite, the only known material in the galaxy capable of withstanding the corrosive effects of Foraxian acid.\n\nSprite Credits: Aurum</Description>
 		<RateOfFire>1.65</RateOfFire>
 		<Sound>weapon/wand_of_death</Sound>
@@ -21664,6 +21800,7 @@
 			<Index>0x104</Index>
 		</Texture>
 		<SlotType>17</SlotType>
+		<Ascended/>
 		<Description>An irregular fragment of a fiery comet that once passed over Malogia. Intergalatic legends know it as the herald of the great alien lord Nizos.\n\nSprite Credits: Trensient</Description>
 		<RateOfFire>0.33</RateOfFire>
 		<Sound>weapon/wand_of_death</Sound>
@@ -21936,6 +22073,7 @@
 			<Index>0x116</Index>
 		</Texture>
 		<SlotType>8</SlotType>
+		<Ethereal/>
 		<Description>An accomplished alien conquerer brandished this wand as a show of might, topping it with a gemstone from each planet he overthrew.\n\nSprite Credits: Aurum</Description>
 		<RateOfFire>1.1</RateOfFire>
 		<Sound>weapon/wand_of_death</Sound>
@@ -22189,6 +22327,7 @@
 			<Index>0x143</Index>
 		</Texture>
 		<SlotType>11</SlotType>
+		<Ascended/>
 		<Description>An ancient druidic spell that invokes earth spirits into furnishing the soil with a noxious, deadly skullshroom colony.</Description>
 		<Sound>spell/fire_spray</Sound>
 		<ExtraTooltipData>
@@ -22212,6 +22351,7 @@
 			<Index>0x148</Index>
 		</Texture>
 		<SlotType>7</SlotType>
+		<Ethereal/>
 		<Description>The fungus covering this armor has eaten away all the metal. While offering little protection, its restorative powers make this armor unique.</Description>
 		<ActivateOnEquip stat="26" amount="60">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="0" amount="80">IncrementStat</ActivateOnEquip>
@@ -22251,6 +22391,7 @@
 			<Index>0x14a</Index>
 		</Texture>
 		<SlotType>5</SlotType>
+		<Ascended/>
 		<Description>An ornately decorated buckler made from an array of crystalline stone. It is too frail to swing around, but it can somehow grow and mantle its wielder in an indestructible crystal armor.</Description>
 		<Sound>spell/fire_spray</Sound>
 		<Projectile>
@@ -22374,6 +22515,7 @@
 			<Index>0x87</Index>
 		</Texture>
 		<SlotType>27</SlotType>
+		<Ethereal/>
 		<Description>Carved from the unblemished minerals deep beneath the realm, this unconventional wakizashi fractures itself when swung to release a strange supernatural energy.</Description>
 		<ExtraTooltipData>
 			<EffectInfo description="Summons sentient crystal star orbiting you for 5 seconds" name=""/>
@@ -22624,6 +22766,7 @@
 			<Index>0x5cc</Index>
 		</Texture>
 		<SlotType>22</SlotType>
+		<Ascended/>
 		<Description>The perfectly cut head of a Prismimic, dastardly agents of the Crystal Entity. Its copying abilities are unprecedented.\n\nSprite Credits: Aurum</Description>
 		<Usable/>
 		<BagType>6</BagType>
@@ -23628,6 +23771,7 @@
 			<Index>0x17d</Index>
 		</Texture>
 		<SlotType>2</SlotType>
+		<Ascended/>
 		<Description>A short lived dirk which saw little use in the hands of a quickly slain adventurer, too lucky for their own good. Knowing its purpose was left unfulfilled, it seeks to eliminate the evil chicken menace from beyond the grave.\n\nSprite Credits: Aurum</Description>
 		<RateOfFire>0.9</RateOfFire>
 		<Sound>weapon/fire_dagger</Sound>
@@ -24464,6 +24608,7 @@
 			<Index>0x554</Index>
 		</Texture>
 		<SlotType>14</SlotType>
+		<Legendary/>
 		<ExtraTooltipData>
 			<EffectInfo name="On Taking Damage" description="10% chance to Slow enemies within 6 tiles for 4 seconds."/>
 			<EffectInfo name="Cooldown" description="5 seconds."/>
@@ -24682,6 +24827,7 @@
 			<Index>0x1cc</Index>
 		</Texture>
 		<SlotType>14</SlotType>
+		<Legendary/>
 		<Description>The designated members of Oryx's court are fitted with this honorary robe, symbolizing their status among his legion.\n\nSprite Credits: Aurum</Description>
 		<ExtraTooltipData>
 			<EffectInfo name="Mad God's Rage" description="Gain 5 attack and dexterity for 8 seconds when hit under 300 HP."/>
