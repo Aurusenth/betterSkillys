@@ -252,10 +252,10 @@ public class EquipmentToolTip extends ToolTip
                this.tierNameText_.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
          }
 
-         this.tierNameText_.x = MAX_WIDTH - this.tierNameText_.width - 8;
-         this.tierNameText_.y = this.height + 2;
-
          addChild(this.tierNameText_);
+
+         this.tierNameText_.x = MAX_WIDTH - this.tierNameText_.width - 8;
+         this.tierNameText_.y = this.height - this.tierNameText_.height - -180;
       }
    }
 
