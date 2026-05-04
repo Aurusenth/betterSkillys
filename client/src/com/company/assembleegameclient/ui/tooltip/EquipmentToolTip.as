@@ -118,7 +118,7 @@ public class EquipmentToolTip extends ToolTip
 
       var specialTierOutlineColor:Number = TierUtil.getSpecialTierColor(this.objectXML_);
 
-      this.backgroundColor = this.playerCanUse || this.player_ == null ? 0x363636 : 6036765;
+      this.backgroundColor = this.playerCanUse || this.player_ == null ? 0x363636 : 0x5A1A28;
       this.outlineColor = this.playerCanUse || player == null ? 0x9B9B9B : 10965039;
 
       if(!this.playerCanUse && this.player_ != null && TierUtil.isUntiered(this.objectXML_))
