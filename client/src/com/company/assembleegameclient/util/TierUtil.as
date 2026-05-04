@@ -8,10 +8,12 @@ import com.company.assembleegameclient.ui.tooltip.TooltipHelper;
 
 public class TierUtil
 {
-    private static const ADMIN_COLOR:Number = 0x8F58A9;
-    private static const ETHEREAL_COLOR:Number = 0xBA1443;
-    private static const ASCENDED_COLOR:Number = 0xA35282;
-    private static const LEGENDARY_COLOR:Number = 0xD69A21;
+    private static const ADMIN_COLOR:Number = 0xFC65D0;
+    private static const ETHEREAL_COLOR:Number = 0xF61D1D;
+    private static const ASCENDED_COLOR:Number = 0x1BF7DD;
+    private static const LEGENDARY_COLOR:Number = 0xFFC800;
+    private static const UNTIERED_COLOR:Number = 0xE22BC9;
+    private static const SET_COLOR:Number = 0xF2FF00;
 
     public function TierUtil()
     {
@@ -137,7 +139,7 @@ public class TierUtil
     {
         if(xml == null)
         {
-            return TooltipHelper.UNTIERED_COLOR;
+            return UNTIERED_COLOR;
         }
 
         if(xml.hasOwnProperty("Admin"))
@@ -167,10 +169,10 @@ public class TierUtil
 
         if(xml.hasOwnProperty("@setType"))
         {
-            return TooltipHelper.SET_COLOR;
+            return SET_COLOR;
         }
 
-        return TooltipHelper.UNTIERED_COLOR;
+        return UNTIERED_COLOR;
     }
 
     public static function isPet(itemDataXML:XML) : Boolean
