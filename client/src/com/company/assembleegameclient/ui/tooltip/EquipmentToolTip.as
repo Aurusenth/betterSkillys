@@ -239,6 +239,11 @@ public class EquipmentToolTip extends ToolTip
 
    private function addTierNameText() : void
    {
+      if(this.tierNameText_ && contains(this.tierNameText_))
+      {
+         removeChild(this.tierNameText_);
+      }
+
       this.tierNameText_ = TierUtil.getTooltipTierTag(this.props_, 14);
 
       if(this.tierNameText_)
@@ -250,15 +255,13 @@ public class EquipmentToolTip extends ToolTip
                break;
             case 1:
                this.tierNameText_.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
+               break;
          }
 
          addChild(this.tierNameText_);
-
-         this.tierNameText_.x = MAX_WIDTH - this.tierNameText_.width - 8;
-         this.tierNameText_.y = this.height - this.tierNameText_.height - -180;
+         setChildIndex(this.tierNameText_, numChildren - 1);
       }
    }
-
 
    private function addTitle() : void {
       var color:int = this.playerCanUse ? 0xffffff : 10965039;
@@ -977,32 +980,38 @@ public class EquipmentToolTip extends ToolTip
    override protected function alignUI():void {
       this.titleText_.x = (this.icon_.width + 4);
       this.titleText_.y = ((this.icon_.height / 2) - (this.titleText_.height / 2));
+
       if (this.tierText_) {
          this.tierText_.y = this.icon_.height / 2 - (this.tierText_.height / 2);
          this.tierText_.x = (MAX_WIDTH - 10) - (this.tierText_.width);
       }
+
       this.descText_.x = 4;
       this.descText_.y = (this.icon_.height + 2);
+
       if (this.line1_ != null && this.attributesText != null) {
          this.line1_.x = 8;
          this.line1_.y = ((this.descText_.y + this.descText_.height) + 4);
          this.attributesText.x = 4;
          this.attributesText.y = (this.line1_.y + 8);
       }
+
       this.line2_.x = 8;
       this.line2_.y = this.attributesText != null ? ((this.attributesText.y + this.attributesText.height) + 8) : ((this.descText_.y + this.descText_.height));
+
       var _local1:uint = (this.line2_.y + 8);
+
       if (this.restrictionsText_) {
          this.restrictionsText_.x = 4;
          this.restrictionsText_.y = _local1;
          _local1 = (_local1 + this.restrictionsText_.height);
       }
-      /*if (this.powerText) {
-         if (contains(this.powerText)) {
-            this.powerText.x = 4;
-            this.powerText.y = _local1;
-         }
-      }*/
+
+      if (this.tierNameText_) {
+         this.tierNameText_.x = MAX_WIDTH - this.tierNameText_.width - 8;
+         this.tierNameText_.y = _local1 + 4;
+         setChildIndex(this.tierNameText_, numChildren - 1);
+      }
    }
 
    private static function formatStringForPluralValue(amount:uint, string:String) : String

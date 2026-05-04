@@ -30,12 +30,18 @@ public class TierUtil
 
         label = new UILabel();
 
-        /*
-            Tag widoczny na item tile / inventory.
-            Każdy item, który ma mieć tag, pokazuje teraz zawsze UT.
-            Kolor zależy od prawdziwego tieru.
-        */
-        label.text = "UT";
+        if(xml.hasOwnProperty("Tier"))
+        {
+            label.text = "T" + xml.Tier;
+        }
+        else if(xml.hasOwnProperty("@setType"))
+        {
+            label.text = "ST";
+        }
+        else
+        {
+            label.text = "UT";
+        }
 
         DefaultLabelFormat.tierLevelLabel(label, size, getTierColor(xml));
 
@@ -47,17 +53,12 @@ public class TierUtil
         var xml:XML = props ? ObjectLibrary.xmlLibrary_[props.type_] : null;
         var label:UILabel = null;
 
-        if(!canShowTierTag(xml))
+        if(!canShowTierTag(xml) || !isSpecialTier(xml))
         {
             return null;
         }
 
         label = new UILabel();
-
-        /*
-            Tekst widoczny w tooltipie.
-            Tutaj pokazujemy pełną nazwę tieru.
-        */
         label.text = getTierName(xml);
 
         DefaultLabelFormat.tierLevelLabel(label, size, getTierColor(xml));
@@ -117,6 +118,19 @@ public class TierUtil
         }
 
         return "untiered";
+    }
+
+    private static function isSpecialTier(xml:XML) : Boolean
+    {
+        if(xml == null)
+        {
+            return false;
+        }
+
+        return xml.hasOwnProperty("Admin")
+                || xml.hasOwnProperty("Ethereal")
+                || xml.hasOwnProperty("Ascended")
+                || xml.hasOwnProperty("Legendary");
     }
 
     public static function getTierColor(xml:XML) : Number
