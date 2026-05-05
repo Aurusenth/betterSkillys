@@ -1542,4 +1542,33 @@
          <Index>13</Index>
       </AnimatedTexture>
    </Object>
+   <Object type="0x601" id="Admin XP Chicken">
+      <Group>Evaluators</Group>
+      <Enemy/>
+      <Class>Character</Class>
+      <!-- Tekstury kurczaka zgodnie z Twoj? pro?b? -->
+      <Texture>
+         <File>lofiChar8x8</File>
+         <Index>0xcd</Index>
+      </Texture>
+      <HitSound>monster/chicken_hit</HitSound>
+      <DeathSound>monster/chicken_death</DeathSound>
+
+      <!-- Statystyki: Du?y model, ale bardzo s?aby -->
+      <Size>180</Size>
+      <MaxHitPoints>10</MaxHitPoints>
+      <Defense>0</Defense>
+
+      <!-- Bardzo du?a ilo?? XP za zabicie -->
+      <Exp>100000</Exp>
+      <XpMult>1000</XpMult>
+
+      <!-- Opcjonalny pocisk (zredukowany do 0 obra?e?, ?eby admin nie oberwa?) -->
+      <Projectile id="0">
+         <ObjectId>Blade</ObjectId>
+         <Damage>0</Damage>
+         <Speed>40</Speed>
+         <LifetimeMS>600</LifetimeMS>
+      </Projectile>
+   </Object>
 </Objects>
