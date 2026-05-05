@@ -63,6 +63,9 @@ namespace Shared.resources
         public int ManaCostPerSecond;
         public BreakDownData BreakDownData;
 
+        // NOWA ZMIENNA DLA DOŚWIADCZENIA
+        public int Exp;
+
         public Item(ushort type, XElement e)
         {
             ObjectType = type;
@@ -98,6 +101,10 @@ namespace Shared.resources
             MpEndCost = e.GetValue("MpEndCost", 0);
             InvUse = e.HasElement("InvUse");
             TypeOfConsumable = InvUse || Consumable;
+
+            // WCZYTYWANIE WARTOŚCI EXP Z XML
+            Exp = e.GetValue("Exp", 0);
+
             ActivateOnEquips = e.Elements("ActivateOnEquip").Select(_ => new KeyValuePair<int, int>(_.GetAttribute<int>("stat"), _.GetAttribute<int>("amount"))).ToArray();
             ActivateEffects = e.Elements("Activate").Select(_ => new ActivateEffect(_)).ToArray();
             OnPlayerHitActivateEffects = e.Elements("OnPlayerHitActivate").Select(_ => new ActivateEffect(_)).ToArray();
@@ -108,7 +115,7 @@ namespace Shared.resources
             Projectiles = e.Elements("Projectile").Select(_ => new ProjectileDesc(_)).ToArray();
             Quantity = e.GetValue("Quantity", 0);
             QuantityLimit = e.GetValue("QuantityLimit", 0);
-            if(e.Element("BreakDown") != null)
+            if (e.Element("BreakDown") != null)
                 BreakDownData = new BreakDownData(e.Element("BreakDown"));
         }
     }

@@ -21420,6 +21420,7 @@
 		<Admin/>
 		<Description>It's healthy!\nMaxes any class to 8/8 and adds a Backpack.</Description>
 		<Sound>use_potion</Sound>
+		<Exp>200000</Exp>
 		<Activate stat="0" amount="2000">IncrementStat</Activate>
 		<Activate stat="3" amount="2000">IncrementStat</Activate>
 		<Activate stat="20" amount="2000">IncrementStat</Activate>
