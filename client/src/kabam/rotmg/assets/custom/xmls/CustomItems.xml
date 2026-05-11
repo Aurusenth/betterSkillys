@@ -144,4 +144,40 @@
 		<feedPower>10000</feedPower>
 		<OnPlayerAbilityActivate objectId="Admin Cat" throwTime="0" color="0xff5050">ObjectToss</OnPlayerAbilityActivate>
 	</Object>
+	<Object type="0x5703" id="Admin Cato Weapon">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x07</Index>
+		</Texture>
+		<SlotType>3</SlotType>
+		<Admin/>
+		<Description>ROAR or MEW?</Description>
+		<ExtraTooltipData>
+			<EffectInfo name="On Ability use" description=""/>
+			<EffectInfo name="" description="Summons a Pirate that charges enemies for 5 seconds."/>
+			<EffectInfo name="Pirate" description="Fires a shot does 250 damage every 0.5 seconds."/>
+		</ExtraTooltipData>
+		<RateOfFire>1.1</RateOfFire>
+		<Sound>weapon/golden_bow</Sound>
+		<Projectile>
+			<ObjectId>Flying Cato</ObjectId>
+			<Speed>180</Speed>
+			<MinDamage>225</MinDamage>
+			<MaxDamage>385</MaxDamage>
+			<LifetimeMS>400</LifetimeMS>
+			<Amplitude>0.5</Amplitude>
+			<Frequency>1</Frequency>
+			<MultiHit/>
+		</Projectile>
+		<BagType>6</BagType>
+		<FameBonus>5</FameBonus>
+		<NumProjectiles>1</NumProjectiles>
+		<ArcGap>3</ArcGap>
+		<OldSound>arrowShoot</OldSound>
+		<feedPower>6500</feedPower>
+		<OnPlayerAbilityActivate objectId="Pirate Ally" throwTime="0" color="0xff5050">ObjectToss</OnPlayerAbilityActivate>
+		<Soulbound/>
+	</Object>
 </Objects>
