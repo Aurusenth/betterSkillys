@@ -1,31 +1,29 @@
 package kabam.rotmg.ui.view
 {
 import com.company.assembleegameclient.constants.ScreenTypes;
-import com.company.assembleegameclient.screens.AccountLoadingScreen;
 import com.company.assembleegameclient.screens.AccountScreen;
 import com.company.assembleegameclient.screens.TitleMenuOption;
 import com.company.assembleegameclient.ui.SoundIcon;
-import com.company.rotmg.graphics.ScreenGraphic;
 import com.company.ui.SimpleText;
 
 import flash.display.Bitmap;
-
+import flash.display.BitmapData;
 import flash.display.Graphics;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
 import flash.geom.Point;
-import flash.geom.Vector3D;
 
 import kabam.rotmg.ui.model.EnvironmentData;
 import kabam.rotmg.ui.view.components.DarkenFactory;
-import kabam.rotmg.ui.view.components.MapBackground;
 import org.osflash.signals.Signal;
 
 public class TitleView extends Sprite
 {
-   private static var TitleScreenGraphic:Class = TitleView_TitleScreenGraphic;
+   // Nowy obraz (szeroki)
+   [Embed(source="New HomeScreen Wide.png")]
+   private static var NewHomeScreen:Class;
 
    private static const COPYRIGHT:String = "© betterSkillys :)";
 
@@ -37,9 +35,13 @@ public class TitleView extends Sprite
    public var legendsClicked:Signal;
    public var editorClicked:Signal;
 
-   private var container:Sprite;
-   private var parallaxLayers:Vector.<Bitmap>;
-   private var graphic:Sprite;
+    private var container:Sprite;
+    private var graphic:Sprite;
+    private var background:Bitmap;
+    private var flamesLayer:Bitmap;
+    private var flamesSensitivityX:Number = 0.06;
+    private var flamesSensitivityY:Number = 0.04;
+    private var flamesEase:Number = 0.14;
 
    private var playButton:TitleMenuOption;
    private var serversButton:TitleMenuOption;
@@ -52,49 +54,72 @@ public class TitleView extends Sprite
    private var copyrightText:SimpleText;
    private var darkenFactory:DarkenFactory;
    private var data:EnvironmentData;
-   public static var anchor:Point = new Point(-40, -40);
-   public static var anchor2:Point = new Point(0, -20);
+    public static var anchor:Point = new Point(-40, -40);
+    public static var anchor2:Point = new Point(0, -20);
 
    public function TitleView()
    {
       this.darkenFactory = new DarkenFactory();
       super();
-      this.initLayers();
-      this.graphic = this.makeScreenGraphic();
-      addChild(this.graphic);
+      this.initScreen();
+        // Inicjuj parallax dla warstwy płomieni
+        this.initParallax();
+      //this.graphic = this.makeScreenGraphic();
+      //addChild(this.graphic);
+      // Dodaj ekran konta nad tłem, aby pokazać informacje o użytkowniku i gwiazdach
       addChild(new AccountScreen());
-      this.makeChildren();
+      //this.makeChildren();
       addChild(new SoundIcon());
    }
 
-   public function initLayers(): void
-   {
-      this.parallaxLayers = new Vector.<Bitmap>();
-      this.parallaxLayers[0] = new TitleView_BackgroundLayer();
-      this.parallaxLayers[1] = new TitleView_FlamesLayer();
+   private function initScreen():void {
+      // Dodanie nowego obrazu jako tła
+      var asset:Object = new NewHomeScreen();
+      if (asset is BitmapData) {
+         this.background = new Bitmap(asset as BitmapData);
+      } else if (asset is Bitmap) {
+         this.background = asset as Bitmap;
+      } else {
+         try {
+            this.background = new Bitmap(asset as BitmapData);
+         } catch (e:Error) {
+            this.background = new Bitmap();
+         }
+      }
+      // Wstaw tło na sam dół stosu wyświetlania
+      addChildAt(this.background, 0);
+   }
 
-      this.parallaxLayers[0].x = 40;
-      this.parallaxLayers[0].y = 40;
-      this.parallaxLayers[1].x = 0;
-      this.parallaxLayers[1].y = 20;
-
-      for (var i:int = 0; i < 2; i++)
-      {
-         this.parallaxLayers.push(this.parallaxLayers[i]);
-         addChild(this.parallaxLayers[i]);
-         this.parallaxLayers[i].addEventListener(Event.ENTER_FRAME, onParallax);
+   private function initParallax():void {
+      // Stwórz warstwę płomieni i dodaj nad tłem
+      try {
+         this.flamesLayer = new TitleView_FlamesLayer();
+      } catch (e:Error) {
+         this.flamesLayer = null;
+      }
+      if (this.flamesLayer != null) {
+         this.flamesLayer.x = 0;
+         this.flamesLayer.y = 20;
+         addChild(this.flamesLayer);
+         this.flamesLayer.addEventListener(Event.ENTER_FRAME, onFlamesParallax);
       }
    }
 
-   public function onParallax(e:Event): void
-   {
-      var bgOffset:Vector3D = new Vector3D(anchor.x-mouseX,anchor.y-mouseY, 0);
-      var flameOffset:Vector3D = new Vector3D(anchor2.x-mouseX,anchor2.y-mouseY, 0);
-      this.parallaxLayers[0].x += (anchor.x + bgOffset.x * 0.015 - this.parallaxLayers[0].x) * 0.015;
-      this.parallaxLayers[0].y += (anchor.y + bgOffset.y * 0.015 - this.parallaxLayers[0].y) * 0.15;
-      this.parallaxLayers[1].x += (anchor2.x + flameOffset.x * 0.025 - this.parallaxLayers[1].x) * 0.025;
-      this.parallaxLayers[1].y += (anchor2.y + flameOffset.y * 0.025 - this.parallaxLayers[1].y) * 0.025;
+   private function onFlamesParallax(e:Event):void {
+      if (this.flamesLayer == null || !stage) return;
+      // Compute target based on mouse position relative to stage center for natural parallax
+      var centerX:Number = stage.stageWidth * 0.5;
+      var centerY:Number = stage.stageHeight * 0.5;
+      var dx:Number = (mouseX - centerX) * this.flamesSensitivityX;
+      var dy:Number = (mouseY - centerY) * this.flamesSensitivityY;
+      var targetX:Number = anchor2.x + dx;
+      var targetY:Number = anchor2.y + dy;
+      // Smoothly interpolate towards target
+      this.flamesLayer.x += (targetX - this.flamesLayer.x) * this.flamesEase;
+      this.flamesLayer.y += (targetY - this.flamesLayer.y) * this.flamesEase;
    }
+
+    // Parallax layers removed to prefer single embedded background image
 
    private function makeScreenGraphic():Sprite
    {
@@ -165,11 +190,21 @@ public class TitleView extends Sprite
 
    public function initialize(data:EnvironmentData) : void
    {
-      this.data = data;
-      this.updateVersionText();
-      this.positionButtons();
-      this.addChildren();
-      this.addListeners();
+       this.data = data;
+       // Upewnij się, że elementy UI istnieją zanim spróbujemy je zaktualizować
+       if (this.container == null || this.versionText == null || this.copyrightText == null) {
+          this.makeChildren();
+       }
+
+       // Upewnij się, że mamy graphic zanim ustawimy pozycje
+       if (this.graphic == null) {
+          this.graphic = this.makeScreenGraphic();
+       }
+
+       this.updateVersionText();
+       this.positionButtons();
+       this.addChildren();
+       this.addListeners();
       if (stage)
          stage.addEventListener("resize", positionButtons);
    }
@@ -192,10 +227,17 @@ public class TitleView extends Sprite
       {
          if (e != null)
             AccountScreen.reSize(e);
-         this.graphic.width = stage.stageWidth;
-         this.graphic.y = stage.stageHeight - 75;
-         this.parallaxLayers[0].scaleX = this.parallaxLayers[1].scaleX = stage.stageWidth / 800;
-         this.parallaxLayers[0].scaleY = this.parallaxLayers[1].scaleY = stage.stageHeight / 600;
+          this.graphic.width = stage.stageWidth;
+          this.graphic.y = stage.stageHeight - 75;
+           // Jeśli mamy własne tło, dopasuj jego rozmiar
+           if (this.background != null) {
+              this.background.width = stage.stageWidth;
+              this.background.height = stage.stageHeight;
+           }
+            if (this.flamesLayer != null) {
+               this.flamesLayer.scaleX = stage.stageWidth / 800;
+               this.flamesLayer.scaleY = stage.stageHeight / 600;
+            }
 
          this.playButton.x = stage.stageWidth / 2 - this.playButton.width / 2;
          this.playButton.y = stage.stageHeight - 75;
@@ -213,4 +255,5 @@ public class TitleView extends Sprite
       }
    }
 }
+
 }
