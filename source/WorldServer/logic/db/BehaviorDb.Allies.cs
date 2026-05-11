@@ -64,6 +64,23 @@ namespace WorldServer.logic
                     )
                 )
             )
+        .Init("Admin Cat",
+            new State(
+                new TimedTransition(60000, "suicide"),
+                new State("attack",
+                    new AllyCharge(1, 10, 1),
+                    new AllyShoot(10, 3, 30, projectileIndex: 0, coolDown: 500),
+                    new NoEntityWithinAllyTransition(10, false, "follow")
+                    ),
+                new State("follow",
+                    new AllyFollow(1, 10, 1.5),
+                    new EntityWithinAllyTransition(10, "attack")
+                    ),
+                new State("suicide",
+                    new Suicide()
+                    )
+                )
+            )
         .Init("CR Friendly Cnidarian",
             new State(
                 new TimedTransition(3000, "suicide"),

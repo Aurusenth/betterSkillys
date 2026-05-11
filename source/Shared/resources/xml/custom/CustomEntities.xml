@@ -142,4 +142,21 @@
 		<NoMiniMap/>
 		<ShadowSize>0</ShadowSize>
 	</Object>
+	<Object type="0x5700" id="Admin Cat">
+		<Class>Character</Class>
+		<Ally/>
+		<Texture>
+			<File>lofiEnvironment3</File>
+			<Index>0x22</Index>
+		</Texture>
+		<MaxHitPoints>5000</MaxHitPoints>
+		<Size>100</Size>
+		<Projectile id="0">
+			<ObjectId>Bolt</ObjectId>
+			<Speed>100</Speed>
+			<Damage>200</Damage>
+			<LifetimeMS>1000</LifetimeMS>
+			<MultiHit/>
+		</Projectile>
+	</Object>
 </Objects>

@@ -627,7 +627,7 @@
       <ArcGap>8</ArcGap>
       <BagType>6</BagType>
       <feedPower>100000</feedPower>
-       
+	  
    </Object>
    <Object type="0x9d8" id="Admin Dagger">
       <Class>Equipment</Class>
