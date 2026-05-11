@@ -229,10 +229,17 @@ public class GameSprite extends Sprite
 
    private function showGuildText() : void
    {
-      this.guildText_ = new GuildText("",-1);
-      this.guildText_.x = 64;
-      this.guildText_.y = 6;
-      addChild(this.guildText_);
+       this.guildText_ = new GuildText("",-1);
+       // Place guild icon/text just to the right of the rankText's background
+       var margin:int = 2;
+       if (this.rankText_ != null) {
+          this.guildText_.x = this.rankText_.x + this.rankText_.width + margin;
+          this.guildText_.y = this.rankText_.y;
+       } else {
+          this.guildText_.x = 116;
+          this.guildText_.y = 6;
+       }
+       addChild(this.guildText_);
    }
 
    private function showRankText() : void
@@ -408,8 +415,13 @@ public class GameSprite extends Sprite
             this.guildText_.scaleX = sWidth;
             this.guildText_.scaleY = sHeight;
          }
-         this.guildText_.x = (64 * this.guildText_.scaleX);
-         this.guildText_.y = (2 * this.guildText_.scaleY);
+          var margin:Number = 6 * this.guildText_.scaleX;
+          if (this.rankText_ != null) {
+             this.guildText_.x = this.rankText_.x + this.rankText_.width * this.rankText_.scaleX + margin;
+          } else {
+             this.guildText_.x = (116 * this.guildText_.scaleX);
+          }
+          this.guildText_.y = (2 * this.guildText_.scaleY);
       }
       if (this.creditDisplay_ != null)
       {
@@ -567,6 +579,13 @@ public class GameSprite extends Sprite
          {
             this.rankText_.draw(player.numStars_);
             this.guildText_.draw(player.guildName_,player.guildRank_);
+               // Reposition guildText_ immediately after rankText_ so it hugs the star background
+               if (this.rankText_ != null && this.guildText_ != null) {
+                  var marginPos:Number = 2 * this.rankText_.scaleX;
+                  // Use measured width after draw and current scale to compute position
+                  this.guildText_.x = this.rankText_.x + this.rankText_.width * this.rankText_.scaleX + marginPos;
+                  this.guildText_.y = this.rankText_.y;
+               }
          }
          if(player.isPaused())
          {

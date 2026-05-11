@@ -66,8 +66,12 @@ import kabam.rotmg.account.core.view.AccountInfoView;
             this.nameTextBackground.x = 200;
             addChild(this.nameTextBackground);
          }
-         addChild(this.rankLayer = new Sprite());
-         addChild(this.guildLayer = new Sprite());
+          addChild(this.rankLayer = new Sprite());
+          // Dodaj lekki odsuw od górnej krawędzi, aby tło rangi nie przyklejało się do ekranu
+          this.rankLayer.y = 8;
+          addChild(this.guildLayer = new Sprite());
+          // Ustaw tę samą wysokość dla warstwy gildii, aby tekst gildii był na tej samej wysokości co gwiazdki
+          this.guildLayer.y = this.rankLayer.y;
          addChild(this.accountInfoLayer = new Sprite());
       }
       
@@ -88,9 +92,16 @@ import kabam.rotmg.account.core.view.AccountInfoView;
       
       private function makeGuildText() : void
       {
-         this.guildText = new GuildText(this.guildName,this.guildRank);
-         this.guildText.x = 92;
-         this.guildText.y = 6;
+          this.guildText = new GuildText(this.guildName,this.guildRank);
+          // Ustaw pozycję poziomą tuż po cieniu pod gwiazdką — jeśli rankText istnieje, użyj jego szerokości
+          var margin:int = 2;
+          if (this.rankText != null) {
+             this.guildText.x = this.rankText.x + this.rankText.width + margin;
+          } else {
+             this.guildText.x = 116;
+          }
+          // Wyrównaj pionowo do gwiazdek (ta sama wysokość co rankText y)
+          this.guildText.y = (this.rankText != null) ? this.rankText.y : 4;
          this.guildLayer.addChild(this.guildText);
       }
       
