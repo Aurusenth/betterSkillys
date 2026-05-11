@@ -21,8 +21,8 @@ import org.osflash.signals.Signal;
 
 public class TitleView extends Sprite
 {
-   // Nowy obraz (szeroki)
-   [Embed(source="New HomeScreen Wide.png")]
+   // Nowy obraz (Project Oryx)
+   [Embed(source="ProjectOryx1.png")]
    private static var NewHomeScreen:Class;
 
    private static const COPYRIGHT:String = "© betterSkillys :)";
@@ -38,10 +38,8 @@ public class TitleView extends Sprite
     private var container:Sprite;
     private var graphic:Sprite;
     private var background:Bitmap;
-    private var flamesLayer:Bitmap;
-    private var flamesSensitivityX:Number = 0.06;
-    private var flamesSensitivityY:Number = 0.04;
-    private var flamesEase:Number = 0.14;
+    private var bgNativeWidth:Number = 1024;
+    private var bgNativeHeight:Number = 768;
 
    private var playButton:TitleMenuOption;
    private var serversButton:TitleMenuOption;
@@ -55,22 +53,19 @@ public class TitleView extends Sprite
    private var darkenFactory:DarkenFactory;
    private var data:EnvironmentData;
     public static var anchor:Point = new Point(-40, -40);
-    public static var anchor2:Point = new Point(0, -20);
 
-   public function TitleView()
-   {
-      this.darkenFactory = new DarkenFactory();
-      super();
-      this.initScreen();
-        // Inicjuj parallax dla warstwy płomieni
-        this.initParallax();
-      //this.graphic = this.makeScreenGraphic();
-      //addChild(this.graphic);
-      // Dodaj ekran konta nad tłem, aby pokazać informacje o użytkowniku i gwiazdach
-      addChild(new AccountScreen());
-      //this.makeChildren();
-      addChild(new SoundIcon());
-   }
+    public function TitleView()
+    {
+       this.darkenFactory = new DarkenFactory();
+       super();
+       this.initScreen();
+       //this.graphic = this.makeScreenGraphic();
+       //addChild(this.graphic);
+       // Dodaj ekran konta nad tłem, aby pokazać informacje o użytkowniku i gwiazdach
+       addChild(new AccountScreen());
+       //this.makeChildren();
+       addChild(new SoundIcon());
+    }
 
    private function initScreen():void {
       // Dodanie nowego obrazu jako tła
@@ -86,38 +81,17 @@ public class TitleView extends Sprite
             this.background = new Bitmap();
          }
       }
-      // Wstaw tło na sam dół stosu wyświetlania
-      addChildAt(this.background, 0);
+       // Zachowaj tło w pełnej rozdzielczości (native), nie skaluj do rozmiaru okna
+       if (this.background.bitmapData) {
+          this.bgNativeWidth = this.background.bitmapData.width;
+          this.bgNativeHeight = this.background.bitmapData.height;
+       }
+       this.background.smoothing = true;
+       // Wstaw tło na sam dół stosu wyświetlania
+       addChildAt(this.background, 0);
    }
 
-   private function initParallax():void {
-      // Stwórz warstwę płomieni i dodaj nad tłem
-      try {
-         this.flamesLayer = new TitleView_FlamesLayer();
-      } catch (e:Error) {
-         this.flamesLayer = null;
-      }
-      if (this.flamesLayer != null) {
-         this.flamesLayer.x = 0;
-         this.flamesLayer.y = 20;
-         addChild(this.flamesLayer);
-         this.flamesLayer.addEventListener(Event.ENTER_FRAME, onFlamesParallax);
-      }
-   }
-
-   private function onFlamesParallax(e:Event):void {
-      if (this.flamesLayer == null || !stage) return;
-      // Compute target based on mouse position relative to stage center for natural parallax
-      var centerX:Number = stage.stageWidth * 0.5;
-      var centerY:Number = stage.stageHeight * 0.5;
-      var dx:Number = (mouseX - centerX) * this.flamesSensitivityX;
-      var dy:Number = (mouseY - centerY) * this.flamesSensitivityY;
-      var targetX:Number = anchor2.x + dx;
-      var targetY:Number = anchor2.y + dy;
-      // Smoothly interpolate towards target
-      this.flamesLayer.x += (targetX - this.flamesLayer.x) * this.flamesEase;
-      this.flamesLayer.y += (targetY - this.flamesLayer.y) * this.flamesEase;
-   }
+    // Parallax for flames removed; only wide homescreen background remains
 
     // Parallax layers removed to prefer single embedded background image
 
@@ -231,13 +205,11 @@ public class TitleView extends Sprite
           this.graphic.y = stage.stageHeight - 75;
            // Jeśli mamy własne tło, dopasuj jego rozmiar
            if (this.background != null) {
-              this.background.width = stage.stageWidth;
-              this.background.height = stage.stageHeight;
+              // Keep background at native resolution and center it in the stage
+              this.background.x = (stage.stageWidth - this.bgNativeWidth) * 0.5;
+              this.background.y = (stage.stageHeight - this.bgNativeHeight) * 0.5;
            }
-            if (this.flamesLayer != null) {
-               this.flamesLayer.scaleX = stage.stageWidth / 800;
-               this.flamesLayer.scaleY = stage.stageHeight / 600;
-            }
+           // flames layer removed
 
          this.playButton.x = stage.stageWidth / 2 - this.playButton.width / 2;
          this.playButton.y = stage.stageHeight - 75;
