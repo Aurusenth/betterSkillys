@@ -248,7 +248,7 @@
 		<Class>GameObject</Class>
 		<Model>Big Cube</Model>
 	</Object>
-	<Object type="0x073c" id="Ico">
+	<Object type="0x5b4a" id="Ico">
 		<Class>GameObject</Class>
 		<Model>Ico</Model>
 	</Object>
