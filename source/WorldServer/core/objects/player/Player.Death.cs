@@ -57,8 +57,8 @@ namespace WorldServer.core.objects
             int? time = null;
             switch (maxed)
             {
-                case 8: objType = 0x073d; break;
-                case 7: objType = 0x073c; break;
+                case 8: objType = 0x072d; break;
+                case 7: objType = 0x072c; break;
                 case 6: objType = 0x072b; break;
                 case 5: objType = 0x072a; break;
                 case 4: objType = 0x0729; break;
