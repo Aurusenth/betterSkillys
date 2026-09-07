@@ -188,11 +188,11 @@
 			<Index>0x0b</Index>
 		</Texture>
 		<SlotType>3</SlotType>
-		<Description>No mortal can fire this dreaded bow without resting in between shots. It requires tremendous skill to wield.</Description>
+		<Description>An upgraded catalyst of destruction. Its heavy shots tear through flesh and spell alike.</Description>
 		<RateOfFire>0.3</RateOfFire>
 		<Sound>weapon/golden_bow</Sound>
 		<Projectile>
-			<ObjectId>Black Arrow</ObjectId>
+			<ObjectId>Reforged Doom Bow Shot</ObjectId>
 			<Speed>100</Speed>
 			<MinDamage>320</MinDamage>
 			<MaxDamage>475</MaxDamage>
@@ -203,7 +203,7 @@
 			<PassesCover/>
 		</Projectile>
 		<NumProjectiles>2</NumProjectiles>
-		<ArcGap>26</ArcGap>
+		<ArcGap>20</ArcGap>
 		<ActivateOnEquip stat="20" amount="4">IncrementStat</ActivateOnEquip>
 		<BagType>6</BagType>
 		<FameBonus>8</FameBonus>
