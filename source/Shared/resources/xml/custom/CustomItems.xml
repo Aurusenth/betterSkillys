@@ -180,4 +180,36 @@
 		<OnPlayerAbilityActivate objectId="Pirate Ally" throwTime="0" color="0xff5050">ObjectToss</OnPlayerAbilityActivate>
 		<Soulbound/>
 	</Object>
+	<Object type="0x5704" id="Reforged Doom Bow">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x0b</Index>
+		</Texture>
+		<SlotType>3</SlotType>
+		<Description>No mortal can fire this dreaded bow without resting in between shots. It requires tremendous skill to wield.</Description>
+		<RateOfFire>0.3</RateOfFire>
+		<Sound>weapon/golden_bow</Sound>
+		<Projectile>
+			<ObjectId>Black Arrow</ObjectId>
+			<Speed>100</Speed>
+			<MinDamage>320</MinDamage>
+			<MaxDamage>475</MaxDamage>
+			<LifetimeMS>550</LifetimeMS>
+			<Frequency>1</Frequency>
+			<Size>125</Size>
+			<MultiHit/>
+			<PassesCover/>
+		</Projectile>
+		<NumProjectiles>2</NumProjectiles>
+		<ArcGap>26</ArcGap>
+		<ActivateOnEquip stat="20" amount="4">IncrementStat</ActivateOnEquip>
+		<BagType>6</BagType>
+		<FameBonus>8</FameBonus>
+		<feedPower>2000</feedPower>
+		<Soulbound/>
+		<DisplayId>Reforged Doom Bow</DisplayId>
+	</Object>
+
 </Objects>

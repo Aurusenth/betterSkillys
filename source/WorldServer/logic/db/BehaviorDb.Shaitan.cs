@@ -9,7 +9,7 @@ using WorldServer.logic.transitions;
 
 namespace WorldServer.logic
 {
-   partial class BehaviorDb
+    partial class BehaviorDb
     {
         private _ LairofShaitan = () => Behav()
             .Init("md1 Head of Shaitan",
