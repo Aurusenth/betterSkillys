@@ -33,4 +33,17 @@
 		</Texture>
 		<AngleCorrection>1</AngleCorrection>
 	</Object>
+	<Object type="0x5707" id="Reforged Cdirk Proj">
+		<Class>Projectile</Class>
+		<RandomTexture>
+			<Texture>
+				<File>customAssets8x8</File>
+				<Index>0x11</Index>
+			</Texture>
+			<Texture>
+				<File>customAssets8x8</File>
+				<Index>0x12</Index>
+			</Texture>
+		</RandomTexture>
+	</Object>
 </Objects>

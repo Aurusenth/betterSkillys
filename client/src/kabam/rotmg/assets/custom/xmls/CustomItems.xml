@@ -211,5 +211,37 @@
 		<Soulbound/>
 		<DisplayId>Reforged Doom Bow</DisplayId>
 	</Object>
+	<Object type="0x5706" id="Reforged Dirk of Cronus">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x10</Index>
+		</Texture>
+		<SlotType>2</SlotType>
+		<Description>A legendary blade perfected through masterful craftsmanship. It no longer merely proves the Dirk's worth—it embodies its ultimate supremacy.</Description>
+		<RateOfFire>0.95</RateOfFire>
+		<Sound>weapon/fire_dagger</Sound>
+		<Projectile>
+			<ObjectId>Reforged Cdirk Proj</ObjectId>
+			<Speed>200</Speed>
+			<MinDamage>195</MinDamage>
+			<MaxDamage>295</MaxDamage>
+			<LifetimeMS>250</LifetimeMS>
+			<Frequency>1</Frequency>
+			<Size>100</Size>
+			<MultiHit/>
+			<Wavy/>
+		</Projectile>
+		<NumProjectiles>1</NumProjectiles>
+		<ArcGap>11</ArcGap>
+		<ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip>
+		<BagType>6</BagType>
+		<FameBonus>6</FameBonus>
+		<feedPower>950</feedPower>
+		<Soulbound/>
+		<DisplayId>Reforged Dirk of Cronus</DisplayId>
+	</Object>
+
 
 </Objects>
