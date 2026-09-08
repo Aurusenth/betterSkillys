@@ -4590,7 +4590,7 @@
 			<Index>0x480</Index>
 		</Texture>
 		<SlotType>9</SlotType>
-		<Ethereal/>
+		<Legendary/>
 		<Description>An eerie reminder of what lays in the depths of the Shatters.</Description>
 		<ActivateOnEquip stat="28" amount="6">IncrementStat</ActivateOnEquip>
 		<ActivateOnEquip stat="20" amount="6">IncrementStat</ActivateOnEquip>
