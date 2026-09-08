@@ -1542,7 +1542,7 @@
 			<Index>13</Index>
 		</AnimatedTexture>
 	</Object>
-	<Object type="0x601" id="Admin XP Chicken">
+	<Object type="0x5717" id="Admin XP Chicken">
 		<Group>Evaluators</Group>
 		<Enemy/>
 		<Class>Character</Class>

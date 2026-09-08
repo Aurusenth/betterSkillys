@@ -110,7 +110,7 @@
 		<Potion/>
 		<BagType>5</BagType>
 	</Object>
-	<Object type="0x4982" id="100 Gold">
+	<Object type="0x5715" id="100 Gold">
 		<Class>Equipment</Class>
 		<Item />
 		<Texture>
