@@ -518,6 +518,25 @@ namespace WorldServer.logic
                     ),
                 new DropPortalOnDeath("Pirate Cave Portal", .01)
                 )
+            )
+        .Init("Admin Cat XP",
+            new State(
+                new State("wander",
+                    new Shoot(8, predictive: 0.3, coolDown: 700),
+                    new Prioritize(
+                        new StayAbove(0.7, 10),
+                        new Follow(0.7, acquireRange: 10, range: 2.2),
+                        new Wander(0.7)
+                        ),
+                    new TimedTransition(3000, "circle")
+                    ),
+                new State("circle",
+                    new Shoot(8, predictive: 0.3, coolDownOffset: 1000, coolDown: 1000),
+                    new Orbit(0.7, 2, acquireRange: 9),
+                    new TimedTransition(3100, "wander")
+                    ),
+                new DropPortalOnDeath("Pirate Cave Portal", .01)
+                )
             );
     }
 }

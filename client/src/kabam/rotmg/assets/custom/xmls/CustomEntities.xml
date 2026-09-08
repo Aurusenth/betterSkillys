@@ -142,21 +142,30 @@
 		<NoMiniMap/>
 		<ShadowSize>0</ShadowSize>
 	</Object>
-	<Object type="0x5700" id="Admin Cat">
+	<Object type="0x5718" id="Admin Cat XP">
+		<Enemy/>
 		<Class>Character</Class>
-		<Ally/>
-		<Texture>
-			<File>lofiEnvironment3</File>
-			<Index>0x22</Index>
-		</Texture>
-		<MaxHitPoints>5000</MaxHitPoints>
-		<Size>100</Size>
+		<AnimatedTexture>
+			<File>chars8x8rMid2</File>
+			<Index>0xe</Index>
+		</AnimatedTexture>
+		<HitSound>monster/scorpions_hit</HitSound>
+		<DeathSound>monster/scorpions_death</DeathSound>
+		<Size>150</Size>
+		<MaxHitPoints>10</MaxHitPoints>
+		<Defense>1</Defense>
+		<Terrain>LowSand</Terrain>
+		<XpMult>1000</XpMult>
+		<SpawnProb>1.0</SpawnProb>
+
 		<Projectile id="0">
-			<ObjectId>Bolt</ObjectId>
-			<Speed>100</Speed>
-			<Damage>200</Damage>
-			<LifetimeMS>1000</LifetimeMS>
-			<MultiHit/>
+			<ObjectId>happy magic</ObjectId>
+			<Damage>1</Damage>
+			<Speed>65</Speed>
+			<Size>68</Size>
+			<LifetimeMS>1500</LifetimeMS>
+			<Wavy/>
 		</Projectile>
 	</Object>
+
 </Objects>
