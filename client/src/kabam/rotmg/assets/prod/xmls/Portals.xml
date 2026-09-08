@@ -891,4 +891,24 @@
       </Texture>
       <ShadowSize>0</ShadowSize>
    </Object>
+   <Object type="0x5709" id="Lair of Shaitan New Auru">
+      <Class>Portal</Class>
+      <IntergamePortal/>
+      <DisplayId>Lair of Shaitan New Test</DisplayId>
+      <DungeonName>Lair of Shaitan New Auru</DungeonName>
+      <Texture>
+         <File>customAssets8x8</File>
+         <Index>0x33</Index>
+      </Texture>
+   </Object>
+   <Object type="0x5710" id="Admin Arena">
+      <Class>Portal</Class>
+      <IntergamePortal/>
+      <DisplayId>Admin Arena</DisplayId>
+      <DungeonName>Admin Arena</DungeonName>
+      <Texture>
+         <File>customAssets8x8</File>
+         <Index>0x34</Index>
+      </Texture>
+   </Object>
 </Objects>
