@@ -34,7 +34,7 @@
 		<Width>256</Width>
 		<Height>256</Height>
 		<Capacity>1</Capacity>
-		<MapJM>Exalt/Vault.jm</MapJM>
+		<MapJM>Exalt/Vault New Auru.jm</MapJM>
 		<Instance enum="vault"/>
 		<CreateInstance/>
 		<Persists/>
