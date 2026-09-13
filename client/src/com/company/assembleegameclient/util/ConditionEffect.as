@@ -146,7 +146,8 @@ public class ConditionEffect
    private static var bitToIcon_:Object = null;
    private static var bitToIcon2_:Object = null;
 
-   private static const GLOW_FILTER:GlowFilter = new GlowFilter(0x000000, .3, 6, 6, 2, BitmapFilterQuality.LOW, false, false)
+   // Zwiększamy parametry rozmycia filtra proporcjonalnie do skali 2x (z 6 do 12)
+   private static const GLOW_FILTER:GlowFilter = new GlowFilter(0x000000, .3, 12, 12, 2, BitmapFilterQuality.LOW, false, false)
 
    public static var effects_:Vector.<ConditionEffect> = new <ConditionEffect>[
       new ConditionEffect("Nothing", 0, null),
@@ -267,16 +268,19 @@ public class ConditionEffect
 
          var icon:BitmapData;
          var drawMatrix:Matrix = new Matrix;
-         drawMatrix.translate(4, 4);
+         drawMatrix.scale(2, 2);
+         drawMatrix.translate(8, 8);
+
          var drawMatrix16:Matrix = new Matrix;
-         drawMatrix16.translate(1.5, 1.5);
+         drawMatrix16.scale(2, 2);
+         drawMatrix16.translate(3, 3);
 
          if (is16Bit){
-            icon = new BitmapDataSpy(18, 18, true, 0x00000000);
+            icon = new BitmapDataSpy(36, 36, true, 0x00000000);
             icon.draw(AssetLibrary.getImageFromSet("lofiInterfaceBig", imageHex), drawMatrix16);
          }
          else {
-            icon = new BitmapDataSpy(16, 16, true, 0x00000000);
+            icon = new BitmapDataSpy(32, 32, true, 0x00000000);
             icon.draw(AssetLibrary.getImageFromSet("lofiInterface2", imageHex), drawMatrix);
          }
          icon = GlowRedrawer.outlineGlow(icon, 0xFFFFFFFF);
@@ -294,7 +298,9 @@ public class ConditionEffect
       {
          bitToIcon_ = new Object;
          var drawMatrix:Matrix = new Matrix;
-         drawMatrix.translate(4, 4);
+         drawMatrix.scale(2, 2);
+         drawMatrix.translate(8, 8);
+
          for (var ce:uint = 0; ce < 32; ce++)
          {
             var icons:Vector.<BitmapData> = null;
@@ -303,7 +309,7 @@ public class ConditionEffect
                icons = new Vector.<BitmapData>;
                for (var i:int = 0; i < effects_[ce].iconOffsets_.length; i++)
                {
-                  var icon:BitmapData = new BitmapDataSpy(16, 16, true, 0x00000000);
+                  var icon:BitmapData = new BitmapDataSpy(32, 32, true, 0x00000000);
                   icon.draw(AssetLibrary.getImageFromSet("lofiInterface2", effects_[ce].iconOffsets_[i]), drawMatrix);
                   icon = GlowRedrawer.outlineGlow(icon, 0xFFFFFFFF);
                   icon.applyFilter(icon, icon.rect, PointUtil.ORIGIN, GLOW_FILTER);
@@ -322,11 +328,14 @@ public class ConditionEffect
 
       if (bitToIcon2_ == null){
          bitToIcon2_ = [];
-         icons =new Vector.<BitmapData>;
+         icons = new Vector.<BitmapData>;
          var drawMatrix:Matrix = new Matrix;
-         drawMatrix.translate(4, 4);
+         drawMatrix.scale(2, 2);
+         drawMatrix.translate(8, 8);
+
          var drawMatrix16:Matrix = new Matrix;
-         drawMatrix16.translate(1.5, 1.5);
+         drawMatrix16.scale(2, 2);
+         drawMatrix16.translate(3, 3);
 
          for (var ce:uint = 32; ce < effects_.length; ce++)
          {
@@ -337,12 +346,11 @@ public class ConditionEffect
                for (var i:int = 0; i < effects_[ce].iconOffsets_.length; i++)
                {
                   if (effects_[ce].icon16Bit_){
-                     icon = new BitmapDataSpy(18, 18, true, 0x00000000);
+                     icon = new BitmapDataSpy(36, 36, true, 0x00000000);
                      icon.draw(AssetLibrary.getImageFromSet("lofiInterfaceBig", effects_[ce].iconOffsets_[i]), drawMatrix16);
                   }
                   else {
-                     icon = new BitmapDataSpy(16, 16, true, 0x00000000);
-
+                     icon = new BitmapDataSpy(32, 32, true, 0x00000000);
                      icon.draw(AssetLibrary.getImageFromSet("lofiInterface2", effects_[ce].iconOffsets_[i]), drawMatrix);
                   }
                   icon = GlowRedrawer.outlineGlow(icon, 0xFFFFFFFF);
