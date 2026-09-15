@@ -522,4 +522,36 @@
 		<UnlockLevel level="20" type="0x031f">Paladin</UnlockLevel>
 		<UnlockCost>999</UnlockCost>
 	</Object>
+	<Object type="0x5719" id="TestAdminClass">
+		<Class>Player</Class>
+		<Description>Testing class configured with universal slot 67 for unrestricted equipment testing.</Description>
+		<AnimatedTexture>
+			<File>players</File>
+			<Index>15</Index>
+		</AnimatedTexture>
+		<HitSound>player/archer_hit</HitSound>
+		<DeathSound>player/archer_death</DeathSound>
+		<Player/>
+		<BloodProb>1.0</BloodProb>
+		<SlotTypes>3, 67, 14, 9, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+		<Equipment>0xa1a, -1, -1, -1, 0xa22, -1, -1, -1, -1, -1, -1, -1</Equipment>
+		<MaxHitPoints max="700">100</MaxHitPoints>
+		<MaxMagicPoints max="400">100</MaxMagicPoints>
+		<Attack max="75">10</Attack>
+		<Defense max="30">0</Defense>
+		<Speed max="60">10</Speed>
+		<Dexterity max="75">15</Dexterity>
+		<HpRegen max="50">12</HpRegen>
+		<MpRegen max="75">15</MpRegen>
+		<LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
+		<LevelIncrease min="5" max="15">MaxMagicPoints</LevelIncrease>
+		<LevelIncrease min="1" max="2">Attack</LevelIncrease>
+		<LevelIncrease min="0" max="1">Defense</LevelIncrease>
+		<LevelIncrease min="0" max="2">Speed</LevelIncrease>
+		<LevelIncrease min="1" max="2">Dexterity</LevelIncrease>
+		<LevelIncrease min="0" max="2">HpRegen</LevelIncrease>
+		<LevelIncrease min="1" max="2">MpRegen</LevelIncrease>
+		<UnlockLevel level="1" type="0x031c">Bard</UnlockLevel>
+		<UnlockCost>0</UnlockCost>
+	</Object>
 </Objects>

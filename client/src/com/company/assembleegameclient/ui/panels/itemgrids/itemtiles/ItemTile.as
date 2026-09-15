@@ -84,6 +84,7 @@ public class ItemTile extends Sprite
       return true;
    }
 
+   // Funkcja, której zabrakło w poprzednim kodzie
    public function setItemSprite(itemTileSprite:ItemTileSprite) : void
    {
       if(!this.itemContainer)
@@ -101,7 +102,16 @@ public class ItemTile extends Sprite
    {
       if(this.itemSprite.itemId != ItemConstants.NO_ITEM)
       {
-         this.restrictedUseIndicator.visible = !ObjectLibrary.isUsableByPlayer(this.itemSprite.itemId,player);
+         // MODYFIKACJA: Sprawdzenie nowej klasy
+         // ZMIEŃ 9999 NA DOKŁADNE ID (ObjectType) TWOJEJ KLASY Z PLIKÓW XML
+         if (player != null && player.objectType_ == 9999)
+         {
+            this.restrictedUseIndicator.visible = false;
+         }
+         else
+         {
+            this.restrictedUseIndicator.visible = !ObjectLibrary.isUsableByPlayer(this.itemSprite.itemId,player);
+         }
       }
       else
       {

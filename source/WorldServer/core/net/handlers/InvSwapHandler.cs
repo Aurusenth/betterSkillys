@@ -234,10 +234,10 @@ namespace WorldServer.core.net.handlers
 
         private bool ValidateItemSwap(Player player, IContainer container, Item item, int slot)
         {
-            if(container == player)
+            if (container == player)
             {
-                if(slot > 20)
-                    if(item != null)
+                if (slot > 20)
+                    if (item != null)
                     {
                         var count = -1;
                         for (var i = 20; i < 28; i++)
@@ -265,7 +265,7 @@ namespace WorldServer.core.net.handlers
         private bool ValidateEntities(Player player, Entity from, Entity to)
         {
             // returns false if bad input
-            if (from == null || to == null) 
+            if (from == null || to == null)
                 return false;
 
             if (from as IContainer == null || to as IContainer == null)
@@ -288,7 +288,7 @@ namespace WorldServer.core.net.handlers
 
             var aPos = new Vector2(from.X, from.Y);
             var bPos = new Vector2(to.X, to.Y);
-            if (Vector2.DistanceSquared(aPos, bPos) > 1) 
+            if (Vector2.DistanceSquared(aPos, bPos) > 1)
                 return false;
             return true;
         }
@@ -298,6 +298,10 @@ namespace WorldServer.core.net.handlers
         {
             // Jeśli którakolwiek ze stron to gracz i jest on adminem, pozwól na wszystko
             if ((conA is Player pA && pA.Client.Account.Admin) || (conB is Player pB && pB.Client.Account.Admin))
+                return true;
+
+            // MODYFIKACJA: Jeżeli jakakolwiek strona akcji to nowa klasa (Zmień 9999 na ID nowej klasy z XML), pozwól na operację
+            if ((conA is Player playerA && playerA.ObjectType == 9999) || (conB is Player playerB && playerB.ObjectType == 9999))
                 return true;
 
             // Standardowa walidacja dla zwykłych graczy
