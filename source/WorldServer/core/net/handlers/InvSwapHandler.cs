@@ -26,7 +26,7 @@ namespace WorldServer.core.net.handlers
     public class InvSwapHandler : IMessageHandler
     {
         private const ushort SOULBOUND_LOOT_BAG_TYPE = 0x0503;
-        private static readonly string[] StackableItems = new string[] { "Magic Dust", "Glowing Shard", "Frozen Coin" }; //stackable items
+        private static readonly string[] StackableItems = new string[] { "Magic Dust", "Glowing Shard", "Frozen Coin" };
 
         public override MessageId MessageId => MessageId.INVSWAP;
 
@@ -245,9 +245,6 @@ namespace WorldServer.core.net.handlers
                                 count++;
                         if (count > 1)
                             return false;
-                        //for (var i = 20; i < 28; i++)
-                        //    if (player.Inventory[i] != null && player.Inventory[i].ObjectType == item.ObjectType && item.TalismanItemDesc.OnlyOne)
-                        //        return false;
                     }
             }
             return container == player || item == null || !item.Soulbound && !player.Client.Account.Admin || IsSoleContainerOwner(player, container);
@@ -293,18 +290,15 @@ namespace WorldServer.core.net.handlers
             return true;
         }
 
-        // todo add in talisman count checks
         private bool ValidateSlotSwap(IContainer conA, IContainer conB, int slotA, int slotB)
         {
-            // Jeśli którakolwiek ze stron to gracz i jest on adminem, pozwól na wszystko
             if ((conA is Player pA && pA.Client.Account.Admin) || (conB is Player pB && pB.Client.Account.Admin))
                 return true;
 
-            // MODYFIKACJA: Jeżeli jakakolwiek strona akcji to nowa klasa (Zmień 9999 na ID nowej klasy z XML), pozwól na operację
-            if ((conA is Player playerA && playerA.ObjectType == 9999) || (conB is Player playerB && playerB.ObjectType == 9999))
+            // Zaktualizowano na docelowe ID postaci 0x5719
+            if ((conA is Player playerA && playerA.ObjectType == 0x5719) || (conB is Player playerB && playerB.ObjectType == 0x5719))
                 return true;
 
-            // Standardowa walidacja dla zwykłych graczy
             return slotA < 20 && slotB < 20 &&
                    conB.AuditItem(conA.Inventory[slotA], slotB) && conA.AuditItem(conB.Inventory[slotB], slotA);
         }
