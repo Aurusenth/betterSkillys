@@ -437,4 +437,124 @@
 		<FameBonus>5</FameBonus>
 		<feedPower>325</feedPower>
 	</Object>
+	<Object type="0x5730" id="Ring of Absolute Attack">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x50</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>8</Tier>
+		<Description>An immaculately perfect spinel embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="20" amount="18">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
+	<Object type="0x5731" id="Ring of Absolute Defense">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x51</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>8</Tier>
+		<Description>An immaculately perfect onyx embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="21" amount="18">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
+	<Object type="0x5732" id="Ring of Absolute Speed">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x52</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>8</Tier>
+		<Description>An immaculately perfect emerald embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="22" amount="18">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
+	<Object type="0x5733" id="Ring of Absolute Vitality">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x53</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>8</Tier>
+		<Description>An immaculately perfect ruby embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="26" amount="18">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
+	<Object type="0x5734" id="Ring of Absolute Wisdom">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x54</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>8</Tier>
+		<Description>An immaculately perfect sapphire embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="27" amount="18">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
+	<Object type="0x5735" id="Ring of Absolute Dexterity">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x55</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>8</Tier>
+		<Description>An immaculately perfect citrine embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="28" amount="18">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
+	<Object type="0x5736" id="Ring of Absolute Health">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x56</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>8</Tier>
+		<Description>An immaculately perfect topaz embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="0" amount="250">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
+	<Object type="0x5737" id="Ring of Absolute Magic">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x57</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>8</Tier>
+		<Description>An immaculately perfect amethyst embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="3" amount="250">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
 </Objects>
