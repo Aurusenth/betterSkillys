@@ -317,5 +317,124 @@
 		<feedPower>2000</feedPower>
 		<Soulbound/>
 	</Object>
-
+	<Object type="0x5722" id="Ring of Transcendent Attack">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x40</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>7</Tier>
+		<Description>An immaculately perfect spinel embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="20" amount="14">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
+	<Object type="0x5723" id="Ring of Transcendent Defense">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x41</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>7</Tier>
+		<Description>An immaculately perfect onyx embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="21" amount="14">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
+	<Object type="0x5724" id="Ring of Transcendent Speed">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x42</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>7</Tier>
+		<Description>An immaculately perfect emerald embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="22" amount="14">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
+	<Object type="0x5725" id="Ring of Transcendent Vitality">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x43</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>7</Tier>
+		<Description>An immaculately perfect ruby embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="26" amount="14">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
+	<Object type="0x5726" id="Ring of Transcendent Wisdom">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x44</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>7</Tier>
+		<Description>An immaculately perfect sapphire embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="27" amount="14">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
+	<Object type="0x5727" id="Ring of Transcendent Dexterity">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x45</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>7</Tier>
+		<Description>An immaculately perfect citrine embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="28" amount="14">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
+	<Object type="0x5728" id="Ring of Transcendent Health">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x46</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>7</Tier>
+		<Description>An immaculately perfect topaz embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="0" amount="220">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
+	<Object type="0x5729" id="Ring of Transcendent Magic">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x47</Index>
+		</Texture>
+		<SlotType>9</SlotType>
+		<Tier>7</Tier>
+		<Description>An immaculately perfect amethyst embedded in an exquisite gold ring.</Description>
+		<ActivateOnEquip stat="3" amount="220">IncrementStat</ActivateOnEquip>
+		<BagType>9</BagType>
+		<FameBonus>5</FameBonus>
+		<feedPower>325</feedPower>
+	</Object>
 </Objects>
