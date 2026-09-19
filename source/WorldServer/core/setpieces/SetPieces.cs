@@ -47,7 +47,8 @@ namespace WorldServer.core.worlds
             SetPiece(new Pyre(), 0, 5, TerrainType.MidSand, TerrainType.HighSand),
             SetPiece(new LavaFissure(), 3, 5, TerrainType.Mountains),
             SetPiece(new Crystal(), 1, 1, TerrainType.Mountains),
-            SetPiece(new KageKami(), 2, 3, TerrainType.HighForest, TerrainType.HighPlains)
+            SetPiece(new KageKami(), 2, 3, TerrainType.HighForest, TerrainType.HighPlains),
+            SetPiece(new ShtrsDefenseSystem(), 1, 1, TerrainType.Mountains)
         };
 
         public static int[,] RotateCW(int[,] mat)
