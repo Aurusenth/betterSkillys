@@ -42,7 +42,14 @@ namespace WorldServer.core.commands
                     try
                     {
                         ISetPiece piece = (ISetPiece)Activator.CreateInstance(Type.GetType("WorldServer.core.setpieces." + setPiece, true, true));
-                        piece.RenderSetPiece(player.World, new IntPoint((int)player.X + 1, (int)player.Y + 1));
+                        // Center the setpiece on the player's current position instead of offsetting it
+                        var size = piece.Size;
+                        var px = (int)player.X - size / 2;
+                        var py = (int)player.Y - size / 2;
+                        // clamp to map bounds
+                        px = Math.Clamp(px, 0, player.World.Map.Width - size);
+                        py = Math.Clamp(py, 0, player.World.Map.Height - size);
+                        piece.RenderSetPiece(player.World, new IntPoint(px, py));
                         return true;
                     }
                     catch (Exception)
