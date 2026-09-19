@@ -8007,25 +8007,25 @@
 		<SlotType>17</SlotType>
 		<Ethereal/>
 		<Description>A staff that channels the ultimate force of Anatis.</Description>
-		<RateOfFire>0.25</RateOfFire>
+		<RateOfFire>0.85</RateOfFire>
 		<Sound>monster/chicken_death</Sound>
 		<Projectile>
-			<ObjectId>Anatis</ObjectId>
-			<Speed>25</Speed>
-			<MinDamage>80</MinDamage>
-			<MaxDamage>100</MaxDamage>
-			<LifetimeMS>3000</LifetimeMS>
-			<Amplitude>1</Amplitude>
-			<Frequency>1</Frequency>
+			<ObjectId>Feather</ObjectId>
+			<Speed>85</Speed>
+			<MinDamage>120</MinDamage>
+			<MaxDamage>200</MaxDamage>
+			<LifetimeMS>1474</LifetimeMS>
+			<Amplitude>0.57</Amplitude>
+			<Frequency>1.4</Frequency>
 			<Size>80</Size>
 		</Projectile>
-		<BagType>6</BagType>
-		<NumProjectiles>1</NumProjectiles>
+		<NumProjectiles>2</NumProjectiles>
 		<ArcGap>0</ArcGap>
-		<OldSound>magicShoot</OldSound>
+		<BagType>6</BagType>
 		<FameBonus>2</FameBonus>
 		<feedPower>550</feedPower>
 		<Soulbound/>
+		<DisplayId>Anatis Staff</DisplayId>
 	</Object>
 	<Object type="0xc25" id="Ghost Pirate Rum">
 		<Class>Equipment</Class>
