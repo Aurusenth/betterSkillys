@@ -557,4 +557,37 @@
 		<FameBonus>5</FameBonus>
 		<feedPower>325</feedPower>
 	</Object>
+	<Object type="0x5737" id="Reforged Demon Blade">
+		<Class>Equipment</Class>
+		<Item/>
+		<Texture>
+			<File>customAssets8x8</File>
+			<Index>0x13</Index>
+		</Texture>
+		<SlotType>1</SlotType>
+		<Ethereal/>
+		<Description>forged in the deepest abysses of the realm, this blade has evolved past its hunger, now seeking nothing less than total carnage.</Description>
+		<RateOfFire>1</RateOfFire>
+		<Sound>weapon/glass_sword</Sound>
+		<Projectile>
+			<ObjectId>Temple Green Bolt</ObjectId>
+			<Speed>200</Speed>
+			<MinDamage>195</MinDamage>
+			<MaxDamage>245</MaxDamage>
+			<LifetimeMS>260</LifetimeMS>
+			<Amplitude>0.1</Amplitude>
+			<Frequency>2</Frequency>
+			<Size>85</Size>
+			<MultiHit/>
+		</Projectile>
+		<NumProjectiles>3</NumProjectiles>
+		<ArcGap>20</ArcGap>
+		<ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
+		<ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
+		<BagType>6</BagType>
+		<FameBonus>10</FameBonus>
+		<feedPower>2000</feedPower>
+		<Soulbound/>
+		<DisplayId>Reforged Demon Blade</DisplayId>
+	</Object>
 </Objects>

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using WorldServer.core.objects;
 using WorldServer.core.objects.containers;
 using WorldServer.core.objects.vendors;
@@ -273,7 +274,7 @@ namespace WorldServer.core.worlds
             return null;
         }
 
-        public int GetNextEntityId() => NextEntityId++;
+        public int GetNextEntityId() => Interlocked.Increment(ref NextEntityId);
 
         public IEnumerable<Player> GetPlayers() => Players.Values;
 
